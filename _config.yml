@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: https://www.google.com/search
+url: http://zhiqixu.github.io
+title: Shmily's Blog
+subtitle: Note On Doing...
+author: 
+simple_search: 
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -59,43 +59,3 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # post_asides:
 # page_asides:
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-# Github repositories
-github_user:
-github_repo_count: 0
-github_show_profile_link: true
-github_skip_forks: true
-
-# Twitter
-twitter_user:
-twitter_tweet_button: true
-
-# Google +1
-google_plus_one: false
-google_plus_one_size: medium
-
-# Google Plus Profile
-# Hidden: No visible button, just add author information to search results
-googleplus_user:
-googleplus_hidden: false
-
-# Pinboard
-pinboard_user:
-pinboard_count: 3
-
-# Delicious
-delicious_user:
-delicious_count: 3
-
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
-
-# Google Analytics
-google_analytics_tracking_id:
-
-# Facebook Like
-facebook_like: false
