@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>App Inventor 设计原则 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="App Inventor&amp;#x662F;&amp;#x96F6;&amp;#x57FA;&amp;#x7840;&amp;#x7684;Blocks-Based&amp;#x7684;&amp;#x8BBE;&amp;#x8BA1;&amp;#x5E73;&amp;#x53F0;&amp;#xFF0C;&amp;#x5BB9;&amp;#x6613;&amp;#x4E0A;&amp;#x624B;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x4E5F;&amp;#x6709;&amp;#x8BA9;&amp;#x4EBA;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="App Inventor 设计原则">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/App-Inventor-DesignRules/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="App Inventor&amp;#x662F;&amp;#x96F6;&amp;#x57FA;&amp;#x7840;&amp;#x7684;Blocks-Based&amp;#x7684;&amp;#x8BBE;&amp;#x8BA1;&amp;#x5E73;&amp;#x53F0;&amp;#xFF0C;&amp;#x5BB9;&amp;#x6613;&amp;#x4E0A;&amp;#x624B;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x4E5F;&amp;#x6709;&amp;#x8BA9;&amp;#x4EBA;">
+<meta property="og:updated_time" content="2016-07-12T02:27:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="App Inventor 设计原则">
+<meta name="twitter:description" content="App Inventor&amp;#x662F;&amp;#x96F6;&amp;#x57FA;&amp;#x7840;&amp;#x7684;Blocks-Based&amp;#x7684;&amp;#x8BBE;&amp;#x8BA1;&amp;#x5E73;&amp;#x53F0;&amp;#xFF0C;&amp;#x5BB9;&amp;#x6613;&amp;#x4E0A;&amp;#x624B;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x4E5F;&amp;#x6709;&amp;#x8BA9;&amp;#x4EBA;">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-App-Inventor-DesignRules" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/12/App-Inventor-DesignRules/" class="article-date">
+  	<time datetime="2016-07-12T02:24:09.000Z" itemprop="datePublished">2016-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      App Inventor 设计原则
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App-Inventor/">App Inventor</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="App-Inventor&#x662F;&#x96F6;&#x57FA;&#x7840;&#x7684;Blocks-Based&#x7684;&#x8BBE;&#x8BA1;&#x5E73;&#x53F0;&#xFF0C;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x8BA9;&#x4EBA;&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6BD4;&#x5982;&#x5B83;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x540E;&#x671F;&#x4FEE;&#x6539;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728;App-Inventor&#x7684;&#x7F16;&#x7A0B;&#x4E2D;&#x5C11;&#x8D70;&#x5F2F;&#x8DEF;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7279;&#x522B;&#x7559;&#x610F;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF1A;"><a href="#App-Inventor&#x662F;&#x96F6;&#x57FA;&#x7840;&#x7684;Blocks-Based&#x7684;&#x8BBE;&#x8BA1;&#x5E73;&#x53F0;&#xFF0C;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x8BA9;&#x4EBA;&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6BD4;&#x5982;&#x5B83;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x540E;&#x671F;&#x4FEE;&#x6539;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728;App-Inventor&#x7684;&#x7F16;&#x7A0B;&#x4E2D;&#x5C11;&#x8D70;&#x5F2F;&#x8DEF;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7279;&#x522B;&#x7559;&#x610F;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF1A;" class="headerlink" title="App Inventor&#x662F;&#x96F6;&#x57FA;&#x7840;&#x7684;Blocks-Based&#x7684;&#x8BBE;&#x8BA1;&#x5E73;&#x53F0;&#xFF0C;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x8BA9;&#x4EBA;&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6BD4;&#x5982;&#x5B83;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x540E;&#x671F;&#x4FEE;&#x6539;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728;App Inventor&#x7684;&#x7F16;&#x7A0B;&#x4E2D;&#x5C11;&#x8D70;&#x5F2F;&#x8DEF;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7279;&#x522B;&#x7559;&#x610F;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF1A;"></a>App Inventor&#x662F;&#x96F6;&#x57FA;&#x7840;&#x7684;Blocks-Based&#x7684;&#x8BBE;&#x8BA1;&#x5E73;&#x53F0;&#xFF0C;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x8BA9;&#x4EBA;&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6BD4;&#x5982;&#x5B83;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x540E;&#x671F;&#x4FEE;&#x6539;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728;App Inventor&#x7684;&#x7F16;&#x7A0B;&#x4E2D;&#x5C11;&#x8D70;&#x5F2F;&#x8DEF;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7279;&#x522B;&#x7559;&#x610F;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF1A;</h3><h4 id="1-&#x5728;&#x8BBE;&#x8BA1;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x505A;&#x597D;&#x8BE6;&#x5C3D;&#x7684;&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF1A;App&#x6240;&#x8981;&#x8FBE;&#x5230;&#x7684;&#x76EE;&#x6807;&#xFF0C;App&#x7684;&#x53D7;&#x4F17;&#x7B49;&#x3002;"><a href="#1-&#x5728;&#x8BBE;&#x8BA1;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x505A;&#x597D;&#x8BE6;&#x5C3D;&#x7684;&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF1A;App&#x6240;&#x8981;&#x8FBE;&#x5230;&#x7684;&#x76EE;&#x6807;&#xFF0C;App&#x7684;&#x53D7;&#x4F17;&#x7B49;&#x3002;" class="headerlink" title="1. &#x5728;&#x8BBE;&#x8BA1;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x505A;&#x597D;&#x8BE6;&#x5C3D;&#x7684;&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF1A;App&#x6240;&#x8981;&#x8FBE;&#x5230;&#x7684;&#x76EE;&#x6807;&#xFF0C;App&#x7684;&#x53D7;&#x4F17;&#x7B49;&#x3002;"></a>1. &#x5728;&#x8BBE;&#x8BA1;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x505A;&#x597D;&#x8BE6;&#x5C3D;&#x7684;&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF1A;App&#x6240;&#x8981;&#x8FBE;&#x5230;&#x7684;&#x76EE;&#x6807;&#xFF0C;App&#x7684;&#x53D7;&#x4F17;&#x7B49;&#x3002;</h4><h4 id="2-&#x5728;&#x5F00;&#x59CB;&#x5199;&#x7A0B;&#x5E8F;&#x524D;&#x5C31;&#x8981;&#x5B9A;&#x597D;UI&#x7684;&#x754C;&#x9762;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x5C06;Prototype&#x5728;&#x7EB8;&#x4E0A;&#x8FD8;&#x539F;&#x51FA;&#x6765;&#x3002;"><a href="#2-&#x5728;&#x5F00;&#x59CB;&#x5199;&#x7A0B;&#x5E8F;&#x524D;&#x5C31;&#x8981;&#x5B9A;&#x597D;UI&#x7684;&#x754C;&#x9762;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x5C06;Prototype&#x5728;&#x7EB8;&#x4E0A;&#x8FD8;&#x539F;&#x51FA;&#x6765;&#x3002;" class="headerlink" title="2. &#x5728;&#x5F00;&#x59CB;&#x5199;&#x7A0B;&#x5E8F;&#x524D;&#x5C31;&#x8981;&#x5B9A;&#x597D;UI&#x7684;&#x754C;&#x9762;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x5C06;Prototype&#x5728;&#x7EB8;&#x4E0A;&#x8FD8;&#x539F;&#x51FA;&#x6765;&#x3002;"></a>2. &#x5728;&#x5F00;&#x59CB;&#x5199;&#x7A0B;&#x5E8F;&#x524D;&#x5C31;&#x8981;&#x5B9A;&#x597D;UI&#x7684;&#x754C;&#x9762;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x5C06;Prototype&#x5728;&#x7EB8;&#x4E0A;&#x8FD8;&#x539F;&#x51FA;&#x6765;&#x3002;</h4><h4 id="3-&#x53D6;&#x4E00;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x9879;&#x76EE;&#x540D;&#xFF0C;&#x4E0D;&#x8981;&#x7528;abc-test&#x7B49;&#x6765;&#x547D;&#x540D;&#x3002;&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x4E86;&#x5927;&#x91CF;App&#x65F6;&#xFF0C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x4F60;&#x5F88;&#x5FEB;&#x641C;&#x7D22;&#x5B9A;&#x4F4D;&#x5230;&#x3002;&#x5F53;&#x4F60;&#x53D1;&#x5E03;&#x540E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9;&#x522B;&#x4EBA;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;&#x5230;&#x3002;"><a href="#3-&#x53D6;&#x4E00;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x9879;&#x76EE;&#x540D;&#xFF0C;&#x4E0D;&#x8981;&#x7528;abc-test&#x7B49;&#x6765;&#x547D;&#x540D;&#x3002;&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x4E86;&#x5927;&#x91CF;App&#x65F6;&#xFF0C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x4F60;&#x5F88;&#x5FEB;&#x641C;&#x7D22;&#x5B9A;&#x4F4D;&#x5230;&#x3002;&#x5F53;&#x4F60;&#x53D1;&#x5E03;&#x540E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9;&#x522B;&#x4EBA;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;&#x5230;&#x3002;" class="headerlink" title="3. &#x53D6;&#x4E00;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x9879;&#x76EE;&#x540D;&#xFF0C;&#x4E0D;&#x8981;&#x7528;abc, test&#x7B49;&#x6765;&#x547D;&#x540D;&#x3002;&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x4E86;&#x5927;&#x91CF;App&#x65F6;&#xFF0C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x4F60;&#x5F88;&#x5FEB;&#x641C;&#x7D22;&#x5B9A;&#x4F4D;&#x5230;&#x3002;&#x5F53;&#x4F60;&#x53D1;&#x5E03;&#x540E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9;&#x522B;&#x4EBA;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;&#x5230;&#x3002;"></a>3. &#x53D6;&#x4E00;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x9879;&#x76EE;&#x540D;&#xFF0C;&#x4E0D;&#x8981;&#x7528;abc, test&#x7B49;&#x6765;&#x547D;&#x540D;&#x3002;&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x4E86;&#x5927;&#x91CF;App&#x65F6;&#xFF0C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x4F60;&#x5F88;&#x5FEB;&#x641C;&#x7D22;&#x5B9A;&#x4F4D;&#x5230;&#x3002;&#x5F53;&#x4F60;&#x53D1;&#x5E03;&#x540E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9;&#x522B;&#x4EBA;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;&#x5230;&#x3002;</h4><h4 id="4-&#x5C4F;&#x5E55;1&#xFF08;Screen1&#xFF09;&#x662F;App&#x7684;&#x9ED8;&#x8BA4;&#x8FDB;&#x5165;&#x5C4F;&#x5E55;&#xFF0C;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x5C4F;&#x5E55;1&#x7684;&#x8BBE;&#x8BA1;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x614E;&#x91CD;&#xFF0C;&#x60F3;&#x5C06;&#x5C4F;&#x5E55;1&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x5C4F;&#x5E55;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x662F;&#x91CD;&#x505A;&#x3002;"><a href="#4-&#x5C4F;&#x5E55;1&#xFF08;Screen1&#xFF09;&#x662F;App&#x7684;&#x9ED8;&#x8BA4;&#x8FDB;&#x5165;&#x5C4F;&#x5E55;&#xFF0C;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x5C4F;&#x5E55;1&#x7684;&#x8BBE;&#x8BA1;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x614E;&#x91CD;&#xFF0C;&#x60F3;&#x5C06;&#x5C4F;&#x5E55;1&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x5C4F;&#x5E55;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x662F;&#x91CD;&#x505A;&#x3002;" class="headerlink" title="4. &#x5C4F;&#x5E55;1&#xFF08;Screen1&#xFF09;&#x662F;App&#x7684;&#x9ED8;&#x8BA4;&#x8FDB;&#x5165;&#x5C4F;&#x5E55;&#xFF0C;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x5C4F;&#x5E55;1&#x7684;&#x8BBE;&#x8BA1;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x614E;&#x91CD;&#xFF0C;&#x60F3;&#x5C06;&#x5C4F;&#x5E55;1&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x5C4F;&#x5E55;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x662F;&#x91CD;&#x505A;&#x3002;"></a>4. &#x5C4F;&#x5E55;1&#xFF08;Screen1&#xFF09;&#x662F;App&#x7684;&#x9ED8;&#x8BA4;&#x8FDB;&#x5165;&#x5C4F;&#x5E55;&#xFF0C;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x5C4F;&#x5E55;1&#x7684;&#x8BBE;&#x8BA1;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x614E;&#x91CD;&#xFF0C;&#x60F3;&#x5C06;&#x5C4F;&#x5E55;1&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x5C4F;&#x5E55;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x662F;&#x91CD;&#x505A;&#x3002;</h4><h4 id="5-&#x9664;&#x975E;&#x5FC5;&#x8981;&#xFF0C;App&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x5C4F;&#x5E55;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x5C4F;&#x5E55;&#x3002;&#x5728;&#x5C4F;&#x5E55;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6709;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;App&#x4E2D;&#x6B62;&#x8FD0;&#x884C;&#x3002;&#x540C;&#x65F6;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5F88;&#x4E0D;&#x65B9;&#x4FBF;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x5927;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x3002;"><a href="#5-&#x9664;&#x975E;&#x5FC5;&#x8981;&#xFF0C;App&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x5C4F;&#x5E55;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x5C4F;&#x5E55;&#x3002;&#x5728;&#x5C4F;&#x5E55;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6709;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;App&#x4E2D;&#x6B62;&#x8FD0;&#x884C;&#x3002;&#x540C;&#x65F6;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5F88;&#x4E0D;&#x65B9;&#x4FBF;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x5927;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x3002;" class="headerlink" title="5. &#x9664;&#x975E;&#x5FC5;&#x8981;&#xFF0C;App&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x5C4F;&#x5E55;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x5C4F;&#x5E55;&#x3002;&#x5728;&#x5C4F;&#x5E55;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6709;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;App&#x4E2D;&#x6B62;&#x8FD0;&#x884C;&#x3002;&#x540C;&#x65F6;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5F88;&#x4E0D;&#x65B9;&#x4FBF;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x5927;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x3002;"></a>5. &#x9664;&#x975E;&#x5FC5;&#x8981;&#xFF0C;App&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x5C4F;&#x5E55;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x5C4F;&#x5E55;&#x3002;&#x5728;&#x5C4F;&#x5E55;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6709;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;App&#x4E2D;&#x6B62;&#x8FD0;&#x884C;&#x3002;&#x540C;&#x65F6;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5F88;&#x4E0D;&#x65B9;&#x4FBF;&#xFF0C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x5927;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x3002;</h4><h4 id="6-&#x5C3D;&#x53EF;&#x80FD;&#x4EE5;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x91CD;&#x547D;&#x540D;&#x7EC4;&#x4EF6;&#xFF08;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF01;&#xFF09;&#x3002;&#x5F53;&#x4F60;&#x7684;App&#x8BBE;&#x8BA1;&#x7684;&#x6BD4;&#x8F83;&#x5E9E;&#x5927;&#x590D;&#x6742;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0B;&#x7684;Button1&#x3001;Button2&#x3001;Label1&#x3001;Label2&#x7B49;&#x6CA1;&#x6709;&#x786E;&#x5B9A;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x4F1A;&#x8BA9;&#x4F60;&#x6781;&#x5927;&#x964D;&#x4F4E;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;"><a href="#6-&#x5C3D;&#x53EF;&#x80FD;&#x4EE5;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x91CD;&#x547D;&#x540D;&#x7EC4;&#x4EF6;&#xFF08;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF01;&#xFF09;&#x3002;&#x5F53;&#x4F60;&#x7684;App&#x8BBE;&#x8BA1;&#x7684;&#x6BD4;&#x8F83;&#x5E9E;&#x5927;&#x590D;&#x6742;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0B;&#x7684;Button1&#x3001;Button2&#x3001;Label1&#x3001;Label2&#x7B49;&#x6CA1;&#x6709;&#x786E;&#x5B9A;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x4F1A;&#x8BA9;&#x4F60;&#x6781;&#x5927;&#x964D;&#x4F4E;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;" class="headerlink" title="6. &#x5C3D;&#x53EF;&#x80FD;&#x4EE5;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x91CD;&#x547D;&#x540D;&#x7EC4;&#x4EF6;&#xFF08;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF01;&#xFF09;&#x3002;&#x5F53;&#x4F60;&#x7684;App&#x8BBE;&#x8BA1;&#x7684;&#x6BD4;&#x8F83;&#x5E9E;&#x5927;&#x590D;&#x6742;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0B;&#x7684;Button1&#x3001;Button2&#x3001;Label1&#x3001;Label2&#x7B49;&#x6CA1;&#x6709;&#x786E;&#x5B9A;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x4F1A;&#x8BA9;&#x4F60;&#x6781;&#x5927;&#x964D;&#x4F4E;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;"></a>6. &#x5C3D;&#x53EF;&#x80FD;&#x4EE5;&#x6709;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x91CD;&#x547D;&#x540D;&#x7EC4;&#x4EF6;&#xFF08;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF01;&#xFF09;&#x3002;&#x5F53;&#x4F60;&#x7684;App&#x8BBE;&#x8BA1;&#x7684;&#x6BD4;&#x8F83;&#x5E9E;&#x5927;&#x590D;&#x6742;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0B;&#x7684;Button1&#x3001;Button2&#x3001;Label1&#x3001;Label2&#x7B49;&#x6CA1;&#x6709;&#x786E;&#x5B9A;&#x610F;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x4F1A;&#x8BA9;&#x4F60;&#x6781;&#x5927;&#x964D;&#x4F4E;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;</h4><h4 id="7-&#x7EC4;&#x4EF6;&#x547D;&#x540D;&#x539F;&#x5219;&#xFF1A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;-&#x7EC4;&#x4EF6;&#x4F5C;&#x7528;&#xFF0C;&#x5982;ButtonAdd-ButtonStart&#x3002;&#x4F7F;&#x7528;&#x9A86;&#x9A7C;&#x547D;&#x540D;&#x6CD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x975E;&#x5E38;&#x6E05;&#x695A;&#x660E;&#x4E86;&#x3002;"><a href="#7-&#x7EC4;&#x4EF6;&#x547D;&#x540D;&#x539F;&#x5219;&#xFF1A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;-&#x7EC4;&#x4EF6;&#x4F5C;&#x7528;&#xFF0C;&#x5982;ButtonAdd-ButtonStart&#x3002;&#x4F7F;&#x7528;&#x9A86;&#x9A7C;&#x547D;&#x540D;&#x6CD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x975E;&#x5E38;&#x6E05;&#x695A;&#x660E;&#x4E86;&#x3002;" class="headerlink" title="7. &#x7EC4;&#x4EF6;&#x547D;&#x540D;&#x539F;&#x5219;&#xFF1A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;+&#x7EC4;&#x4EF6;&#x4F5C;&#x7528;&#xFF0C;&#x5982;ButtonAdd, ButtonStart&#x3002;&#x4F7F;&#x7528;&#x9A86;&#x9A7C;&#x547D;&#x540D;&#x6CD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x975E;&#x5E38;&#x6E05;&#x695A;&#x660E;&#x4E86;&#x3002;"></a>7. &#x7EC4;&#x4EF6;&#x547D;&#x540D;&#x539F;&#x5219;&#xFF1A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;+&#x7EC4;&#x4EF6;&#x4F5C;&#x7528;&#xFF0C;&#x5982;ButtonAdd, ButtonStart&#x3002;&#x4F7F;&#x7528;&#x9A86;&#x9A7C;&#x547D;&#x540D;&#x6CD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x975E;&#x5E38;&#x6E05;&#x695A;&#x660E;&#x4E86;&#x3002;</h4><h4 id="8-&#x8FC7;&#x7A0B;&#x53CA;&#x53D8;&#x91CF;&#x547D;&#x540D;&#xFF1A;&#x5E38;&#x91CF;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x53D8;&#x91CF;&#x5C0F;&#x5199;&#x3002;&#x8FC7;&#x7A0B;&#x540D;&#x5C0F;&#x5199;&#x5355;&#x8BCD;&#x5F00;&#x5934;&#x63A5;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x5355;&#x8BCD;&#xFF0C;&#x5982;addPhoto&#x3002;"><a href="#8-&#x8FC7;&#x7A0B;&#x53CA;&#x53D8;&#x91CF;&#x547D;&#x540D;&#xFF1A;&#x5E38;&#x91CF;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x53D8;&#x91CF;&#x5C0F;&#x5199;&#x3002;&#x8FC7;&#x7A0B;&#x540D;&#x5C0F;&#x5199;&#x5355;&#x8BCD;&#x5F00;&#x5934;&#x63A5;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x5355;&#x8BCD;&#xFF0C;&#x5982;addPhoto&#x3002;" class="headerlink" title="8. &#x8FC7;&#x7A0B;&#x53CA;&#x53D8;&#x91CF;&#x547D;&#x540D;&#xFF1A;&#x5E38;&#x91CF;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x53D8;&#x91CF;&#x5C0F;&#x5199;&#x3002;&#x8FC7;&#x7A0B;&#x540D;&#x5C0F;&#x5199;&#x5355;&#x8BCD;&#x5F00;&#x5934;&#x63A5;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x5355;&#x8BCD;&#xFF0C;&#x5982;addPhoto&#x3002;"></a>8. &#x8FC7;&#x7A0B;&#x53CA;&#x53D8;&#x91CF;&#x547D;&#x540D;&#xFF1A;&#x5E38;&#x91CF;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x53D8;&#x91CF;&#x5C0F;&#x5199;&#x3002;&#x8FC7;&#x7A0B;&#x540D;&#x5C0F;&#x5199;&#x5355;&#x8BCD;&#x5F00;&#x5934;&#x63A5;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x5355;&#x8BCD;&#xFF0C;&#x5982;addPhoto&#x3002;</h4><h4 id="9-&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#x3001;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7B49;&#x6700;&#x597D;&#x8FDB;&#x884C;&#x5907;&#x6CE8;&#xFF0C;&#x65E2;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x56DE;&#x5FC6;&#xFF0C;&#x4E5F;&#x65B9;&#x4FBF;&#x522B;&#x4EBA;&#x8BFB;&#x7A0B;&#x5E8F;&#x3002;"><a href="#9-&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#x3001;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7B49;&#x6700;&#x597D;&#x8FDB;&#x884C;&#x5907;&#x6CE8;&#xFF0C;&#x65E2;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x56DE;&#x5FC6;&#xFF0C;&#x4E5F;&#x65B9;&#x4FBF;&#x522B;&#x4EBA;&#x8BFB;&#x7A0B;&#x5E8F;&#x3002;" class="headerlink" title="9. &#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#x3001;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7B49;&#x6700;&#x597D;&#x8FDB;&#x884C;&#x5907;&#x6CE8;&#xFF0C;&#x65E2;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x56DE;&#x5FC6;&#xFF0C;&#x4E5F;&#x65B9;&#x4FBF;&#x522B;&#x4EBA;&#x8BFB;&#x7A0B;&#x5E8F;&#x3002;"></a>9. &#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#x3001;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7B49;&#x6700;&#x597D;&#x8FDB;&#x884C;&#x5907;&#x6CE8;&#xFF0C;&#x65E2;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x56DE;&#x5FC6;&#xFF0C;&#x4E5F;&#x65B9;&#x4FBF;&#x522B;&#x4EBA;&#x8BFB;&#x7A0B;&#x5E8F;&#x3002;</h4><h4 id="10-&#x5728;&#x6D4B;&#x8BD5;&#x65F6;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x548C;&#x9884;&#x671F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5728;&#x57FA;&#x672C;&#x6392;&#x9664;&#x4E86;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x7684;&#x95EE;&#x9898;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x8BD5;&#x7740;&#x7528;&#x5176;&#x5B83;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4E0D;&#x540C;&#x54C1;&#x724C;&#x3001;&#x578B;&#x53F7;&#x3001;&#x5C3A;&#x5BF8;&#x7684;&#x624B;&#x673A;&#x3001;&#x5E73;&#x677F;&#x53EF;&#x80FD;&#x6548;&#x679C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x3002;"><a href="#10-&#x5728;&#x6D4B;&#x8BD5;&#x65F6;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x548C;&#x9884;&#x671F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5728;&#x57FA;&#x672C;&#x6392;&#x9664;&#x4E86;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x7684;&#x95EE;&#x9898;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x8BD5;&#x7740;&#x7528;&#x5176;&#x5B83;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4E0D;&#x540C;&#x54C1;&#x724C;&#x3001;&#x578B;&#x53F7;&#x3001;&#x5C3A;&#x5BF8;&#x7684;&#x624B;&#x673A;&#x3001;&#x5E73;&#x677F;&#x53EF;&#x80FD;&#x6548;&#x679C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x3002;" class="headerlink" title="10. &#x5728;&#x6D4B;&#x8BD5;&#x65F6;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x548C;&#x9884;&#x671F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5728;&#x57FA;&#x672C;&#x6392;&#x9664;&#x4E86;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x7684;&#x95EE;&#x9898;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x8BD5;&#x7740;&#x7528;&#x5176;&#x5B83;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4E0D;&#x540C;&#x54C1;&#x724C;&#x3001;&#x578B;&#x53F7;&#x3001;&#x5C3A;&#x5BF8;&#x7684;&#x624B;&#x673A;&#x3001;&#x5E73;&#x677F;&#x53EF;&#x80FD;&#x6548;&#x679C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x3002;"></a>10. &#x5728;&#x6D4B;&#x8BD5;&#x65F6;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x548C;&#x9884;&#x671F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5728;&#x57FA;&#x672C;&#x6392;&#x9664;&#x4E86;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x7684;&#x95EE;&#x9898;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x8BD5;&#x7740;&#x7528;&#x5176;&#x5B83;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4E0D;&#x540C;&#x54C1;&#x724C;&#x3001;&#x578B;&#x53F7;&#x3001;&#x5C3A;&#x5BF8;&#x7684;&#x624B;&#x673A;&#x3001;&#x5E73;&#x677F;&#x53EF;&#x80FD;&#x6548;&#x679C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x3002;</h4><h4 id="11-&#x5C3D;&#x91CF;&#x7528;&#x5E03;&#x5C40;Layout&#x6765;&#x653E;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65E2;&#x7F8E;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65F6;&#x5BF9;&#x540C;&#x4E00;&#x5E03;&#x5C40;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x89C6;&#x6027;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5E03;&#x5C40;&#x5B8C;&#x6210;&#xFF0C;&#x63D0;&#x9AD8;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;"><a href="#11-&#x5C3D;&#x91CF;&#x7528;&#x5E03;&#x5C40;Layout&#x6765;&#x653E;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65E2;&#x7F8E;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65F6;&#x5BF9;&#x540C;&#x4E00;&#x5E03;&#x5C40;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x89C6;&#x6027;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5E03;&#x5C40;&#x5B8C;&#x6210;&#xFF0C;&#x63D0;&#x9AD8;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;" class="headerlink" title="11. &#x5C3D;&#x91CF;&#x7528;&#x5E03;&#x5C40;Layout&#x6765;&#x653E;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65E2;&#x7F8E;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65F6;&#x5BF9;&#x540C;&#x4E00;&#x5E03;&#x5C40;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x89C6;&#x6027;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5E03;&#x5C40;&#x5B8C;&#x6210;&#xFF0C;&#x63D0;&#x9AD8;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;"></a>11. &#x5C3D;&#x91CF;&#x7528;&#x5E03;&#x5C40;Layout&#x6765;&#x653E;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65E2;&#x7F8E;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65F6;&#x5BF9;&#x540C;&#x4E00;&#x5E03;&#x5C40;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x89C6;&#x6027;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5E03;&#x5C40;&#x5B8C;&#x6210;&#xFF0C;&#x63D0;&#x9AD8;&#x7F16;&#x7A0B;&#x6548;&#x7387;&#x3002;</h4><h4 id="12-BackPack&#x662F;2015&#x5E74;10&#x6708;&#x4EFD;&#x65B0;&#x589E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x653E;&#x5230;&#x80CC;&#x5305;&#x4E2D;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;App-Inventor&#x65E0;&#x6CD5;&#x590D;&#x5236;&#x5C4F;&#x5E55;&#x548C;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8DE8;&#x5C4F;&#x5E55;&#x95F4;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4EE3;&#x7801;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x3002;"><a href="#12-BackPack&#x662F;2015&#x5E74;10&#x6708;&#x4EFD;&#x65B0;&#x589E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x653E;&#x5230;&#x80CC;&#x5305;&#x4E2D;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;App-Inventor&#x65E0;&#x6CD5;&#x590D;&#x5236;&#x5C4F;&#x5E55;&#x548C;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8DE8;&#x5C4F;&#x5E55;&#x95F4;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4EE3;&#x7801;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x3002;" class="headerlink" title="12. BackPack&#x662F;2015&#x5E74;10&#x6708;&#x4EFD;&#x65B0;&#x589E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x653E;&#x5230;&#x80CC;&#x5305;&#x4E2D;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;App Inventor&#x65E0;&#x6CD5;&#x590D;&#x5236;&#x5C4F;&#x5E55;&#x548C;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8DE8;&#x5C4F;&#x5E55;&#x95F4;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4EE3;&#x7801;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x3002;"></a>12. BackPack&#x662F;2015&#x5E74;10&#x6708;&#x4EFD;&#x65B0;&#x589E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x653E;&#x5230;&#x80CC;&#x5305;&#x4E2D;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;App Inventor&#x65E0;&#x6CD5;&#x590D;&#x5236;&#x5C4F;&#x5E55;&#x548C;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8DE8;&#x5C4F;&#x5E55;&#x95F4;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4EE3;&#x7801;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x3002;</h4>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/20/Hexo-Read-Images/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Hexo中使用本地图片需要的注意点
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/12/App-Inventor-Preparasion/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">App Inventor 开发准备工作</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
