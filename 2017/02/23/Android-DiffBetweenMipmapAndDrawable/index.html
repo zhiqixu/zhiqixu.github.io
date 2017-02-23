@@ -4,21 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo中使用本地图片需要的注意点 | Shmily&#39;s Blog</title>
+  <title>Android中Mipmap和Drawable的区别 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x3010;&amp;#x8F6C;&amp;#x81EA;https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;amp;utm_medium=referral &amp;#x3011;
-&amp;#x8D77;&amp;#x56E0;&amp;#x5728; hexo &amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x">
+  <meta name="description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo中使用本地图片需要的注意点">
-<meta property="og:url" content="http://yoursite.com/2016/07/20/Hexo-Read-Images/index.html">
+<meta property="og:title" content="Android中Mipmap和Drawable的区别">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/Android-DiffBetweenMipmapAndDrawable/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
-<meta property="og:description" content="&amp;#x3010;&amp;#x8F6C;&amp;#x81EA;https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;amp;utm_medium=referral &amp;#x3011;
-&amp;#x8D77;&amp;#x56E0;&amp;#x5728; hexo &amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x">
-<meta property="og:updated_time" content="2016-07-20T02:27:06.000Z">
+<meta property="og:description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
+<meta property="og:updated_time" content="2017-02-23T12:37:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo中使用本地图片需要的注意点">
-<meta name="twitter:description" content="&amp;#x3010;&amp;#x8F6C;&amp;#x81EA;https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;amp;utm_medium=referral &amp;#x3011;
-&amp;#x8D77;&amp;#x56E0;&amp;#x5728; hexo &amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x">
+<meta name="twitter:title" content="Android中Mipmap和Drawable的区别">
+<meta name="twitter:description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -171,11 +168,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Hexo-Read-Images" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android-DiffBetweenMipmapAndDrawable" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/20/Hexo-Read-Images/" class="article-date">
-  	<time datetime="2016-07-20T02:07:00.000Z" itemprop="datePublished">2016-07-20</time>
+      <a href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/" class="article-date">
+  	<time datetime="2017-02-23T12:35:30.000Z" itemprop="datePublished">2017-02-23</time>
 </a>
     </div>
   
@@ -188,7 +185,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo中使用本地图片需要的注意点
+      Android中Mipmap和Drawable的区别
     </h1>
   
 
@@ -197,7 +194,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
         
@@ -208,20 +205,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x3010;&#x8F6C;&#x81EA;<a href="https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;utm_medium=referral</a> &#x3011;</p>
-<h2 id="&#x8D77;&#x56E0;"><a href="#&#x8D77;&#x56E0;" class="headerlink" title="&#x8D77;&#x56E0;"></a>&#x8D77;&#x56E0;</h2><p>&#x5728; hexo &#x4E2D;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x56FE;&#x7247;&#x662F;&#x4EF6;&#x975E;&#x5E38;&#x8BA9;&#x4EBA;&#x7EA0;&#x7ED3;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5728; markdown &#x91CC;&#x7684;&#x56FE;&#x7247;&#x5730;&#x5740;&#x4F3C;&#x4E4E;&#x6C38;&#x8FDC;&#x65E0;&#x6CD5;&#x548C;&#x6700;&#x540E;&#x751F;&#x6210;&#x7684;&#x7F51;&#x9875;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
-<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2><p><a href="https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/%22https://github.com/CodeFalling/hexo-asset-image%22" target="_blank" rel="external">CodeFalling/hexo-asset-image</a></p>
-<ol>
-<li><p>&#x9996;&#x5148;&#x786E;&#x8BA4; _config.yml &#x4E2D;&#x6709; post_asset_folder:true &#x3002;</p>
-</li>
-<li><p>&#x5728; hexo &#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure>
-<p>&#x5047;&#x8BBE;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x76EE;&#x5F55;&#x540D;&#x548C;&#x6587;&#x7AE0;&#x540D;&#x4E00;&#x81F4;&#xFF09;&#xFF1A;<br>MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg<br>MacGesture2-Publish.md</p>
-<p>&#x53EA;&#x8981;&#x4F7F;&#x7528; ![logo] (MacGesture2-Publish/logo.jpg) &#x6216;&#x8005;![logo] (logo.jpg)&#x5C31;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x3002;</p>
-<p>&#x751F;&#x6210;&#x7684;&#x7ED3;&#x6784;&#x4E3A;&#xFF1A;<br>public/2016/07/20/MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; index.html<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg</p>
-<p>&#x540C;&#x65F6;&#xFF0C;&#x751F;&#x6210;&#x7684; html &#x662F;&#xFF1A;<br>&lt; img src=&#x201D;/2015/10/18/MacGesture2-Publish/logo.jpg&#x201D; alt=&#x201D;logo&#x201D; &gt;</p>
+        <p>Android &#x5728; API level 17 &#x52A0;&#x5165;&#x4E86; mipmap &#x6280;&#x672F;&#xFF0C;&#x5BF9; bitmap &#x56FE;&#x7247;&#x7684;&#x6E32;&#x67D3;&#x652F;&#x6301; mipmap &#x6280;&#x672F;&#xFF0C;&#x6765;&#x63D0;&#x9AD8;&#x6E32;&#x67D3;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x8D28;&#x91CF;&#x3002;</p>
+<p>mipmap &#x662F;&#x4E00;&#x79CD;&#x5F88;&#x65E9;&#x5C31;&#x6709;&#x7684;&#x6280;&#x672F;&#x4E86;&#xFF0C;&#x7FFB;&#x8BD1;&#x8FC7;&#x6765;&#x5C31;&#x662F;&#x7EB9;&#x7406;&#x6620;&#x5C04;&#x6280;&#x672F;&#x3002;android &#x4E2D;&#x7684; mipmap &#x6280;&#x672F;&#x4E3B;&#x8981;&#x4E3A;&#x4E86;&#x5E94;&#x5BF9;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#x7F29;&#x653E;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5728;android &#x4E2D;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; bitmap &#x56FE;&#x7247;&#xFF0C;&#x7531;&#x4E8E;&#x5E94;&#x7528;&#x7684;&#x9700;&#x8981;&#xFF08;&#x6BD4;&#x5982;&#x7F29;&#x653E;&#x52A8;&#x753B;&#xFF09;&#xFF0C;&#x53EF;&#x80FD;&#x5BF9;&#x8FD9;&#x4E2A; bitmap &#x8FDB;&#x884C;&#x5404;&#x79CD;&#x6BD4;&#x4F8B;&#x7684;&#x7F29;&#x5C0F;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x7F29;&#x5C0F;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x56FE;&#x7247;&#x7684;&#x8D28;&#x91CF;&#xFF0C;android &#x901A;&#x8FC7; mipmap &#x6280;&#x672F;&#x63D0;&#x524D;&#x5BF9;&#x6309;&#x7F29;&#x5C0F;&#x5C42;&#x7EA7;&#x751F;&#x6210;&#x56FE;&#x7247;&#x9884;&#x5148;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x63D0;&#x9AD8;&#x4E86;&#x56FE;&#x7247;&#x6E32;&#x67D3;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x8D28;&#x91CF;&#x3002;</p>
+<p>api &#x4E2D;&#x901A;&#x8FC7; Bitmap &#x7684; public final void setHasMipMap (boolean hasMipMap) &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x7CFB;&#x7EDF;&#x6E32;&#x67D3;&#x5668;&#x5C1D;&#x8BD5;&#x5F00;&#x542F; Bitmap &#x7684; mipmap &#x6280;&#x672F;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5EFA;&#x8BAE;&#x7CFB;&#x7EDF;&#x5F00;&#x542F;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x81F3;&#x4E8E;&#x662F;&#x5426;&#x6B63;&#x771F;&#x5F00;&#x542F;&#xFF0C;&#x8FD8;&#x662F;&#x7531;&#x7CFB;&#x7EDF;&#x51B3;&#x5B9A;&#x3002;</p>
+<p>res &#x76EE;&#x5F55;&#x4E0B;&#x9762; mipmap &#x548C; drawable &#x7684;&#x533A;&#x522B;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5F00;&#x542F;&#x7684;&#x533A;&#x522B;&#x3002;mipmap &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x9ED8;&#x8BA4; setHasMipMap &#x4E3A; true&#xFF0C;drawable &#x9ED8;&#x8BA4; setHasMipMap &#x4E3A; false&#x3002;</p>
+<p>google &#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x53EA;&#x628A; app &#x7684;&#x542F;&#x52A8;&#x56FE;&#x6807;&#x653E;&#x5728; mipmap &#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5176;&#x4ED6;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x4ECD;&#x7136;&#x653E;&#x5728; drawable &#x4E0B;&#x9762;&#x3002;</p>
+<p>google &#xFF1A;<br>drawable/<br>For bitmap files (PNG, JPEG, or GIF), 9-Patch image files, and XML files that describe Drawable shapes or Drawable objects that contain multiple states (normal, pressed, or focused). See the Drawable resource type.<br>mipmap/<br>For app launcher icons. The Android system retains the resources in this folder (and density-specific folders such as mipmap-xxxhdpi) regardless of the screen resolution of the device where your app is installed. This behavior allows launcher apps to pick the best resolution icon for your app to display on the home screen. For more information about using the mipmap folders, see Managing Launcher Icons as mipmap Resources.</p>
 
       
     </div>
@@ -231,18 +220,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/07/24/App-Inventor-Interface/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          App Inventor 操作界面
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/12/App-Inventor-DesignRules/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">App Inventor 设计原则</div>
+    <a href="/2017/02/23/Android-ReadTxt/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android中如何读取txt文件的内容以及其编码问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

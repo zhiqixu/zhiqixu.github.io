@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Git | Shmily&#39;s Blog</title>
+  <title>MySQL enum用法--实现类似check的输入约束 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shmily's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Git/index.html">
+  <meta name="description" content="&amp;#x5C3D;&amp;#x7BA1;MySQL&amp;#x5BF9;check&amp;#x4EC5;&amp;#x7F16;&amp;#x8BD1;&amp;#x4E0D;&amp;#x6267;&amp;#x884C;&amp;#xFF0C;&amp;#x5C3D;&amp;#x7BA1;&amp;#x628A;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x8F93;&amp;#x5165;&amp;#x7EA6;&amp;#x675F;&amp;#x653E;&amp;#x5728;&amp;#x4E1A;&amp;#x52A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL enum用法--实现类似check的输入约束">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/MySQL-ENUM/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x5C3D;&amp;#x7BA1;MySQL&amp;#x5BF9;check&amp;#x4EC5;&amp;#x7F16;&amp;#x8BD1;&amp;#x4E0D;&amp;#x6267;&amp;#x884C;&amp;#xFF0C;&amp;#x5C3D;&amp;#x7BA1;&amp;#x628A;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x8F93;&amp;#x5165;&amp;#x7EA6;&amp;#x675F;&amp;#x653E;&amp;#x5728;&amp;#x4E1A;&amp;#x52A">
+<meta property="og:updated_time" content="2017-02-23T09:10:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shmily's Blog">
+<meta name="twitter:title" content="MySQL enum用法--实现类似check的输入约束">
+<meta name="twitter:description" content="&amp;#x5C3D;&amp;#x7BA1;MySQL&amp;#x5BF9;check&amp;#x4EC5;&amp;#x7F16;&amp;#x8BD1;&amp;#x4E0D;&amp;#x6267;&amp;#x884C;&amp;#xFF0C;&amp;#x5C3D;&amp;#x7BA1;&amp;#x628A;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x8F93;&amp;#x5165;&amp;#x7EA6;&amp;#x675F;&amp;#x653E;&amp;#x5728;&amp;#x4E1A;&amp;#x52A">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -164,53 +168,81 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-MySQL-ENUM" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/10/Hexo-Git-Blog/" class="archive-article-date">
-  	<time datetime="2016-07-10T12:49:39.000Z" itemprop="datePublished">7月 10</time>
+    <div class="article-meta">
+      <a href="/2017/02/23/MySQL-ENUM/" class="article-date">
+  	<time datetime="2017-02-23T09:08:44.000Z" itemprop="datePublished">2017-02-23</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/10/Hexo-Git-Blog/">Hexo+Git 搭建Blog</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL enum用法--实现类似check的输入约束
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x5C3D;&#x7BA1;MySQL&#x5BF9;check&#x4EC5;&#x7F16;&#x8BD1;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x5C3D;&#x7BA1;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x8F93;&#x5165;&#x7EA6;&#x675F;&#x653E;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#x53BB;&#x5B9E;&#x73B0;&#x624D;&#x662F;&#x738B;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x521B;&#x5EFA;table&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x8F93;&#x5165;&#x503C;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x68C0;&#x67E5;&#x3002;<br>&#x6B64;&#x65F6;&#x7528;enum&#x80FD;&#x5B9E;&#x73B0;&#x76F8;&#x4F3C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x6027;&#x522B;&#x201C;&#x7537;&#x201D;&#x6216;&#x201C;&#x5973;&#x201D;&#x7684;&#x8F93;&#x5165;&#x53D7;&#x9650;&#xFF1A;<br>&#x521B;&#x5EFA;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868;(</div><div class="line">.......</div><div class="line">&#x6027;&#x522B; <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">not</span> <span class="literal">null</span> enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>),</div><div class="line">.......</div><div class="line">)</div><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868; <span class="keyword">modify</span> <span class="keyword">column</span> &#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>)</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/23/MySQL-UserAndPrivilege/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          查看MariaDB(MYSQL)数据库中用户及其拥有权限
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/23/MySQL-Encoding/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL数据库编码问题如何解决</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -236,9 +268,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

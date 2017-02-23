@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>MySQL数据库编码问题如何解决 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x7F16;&amp;#x7801;&amp;#x9009;&amp;#x62E9;&amp;#x7684;&amp;#x4E00;&amp;#x822C;&amp;#x51C6;&amp;#x5219;:1&amp;#x3001;GBK/GB2312&amp;#x9002;&amp;#x5408;&amp;#x7EAF;&amp;#x4E2D;&amp;#x6587;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据库编码问题如何解决">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/MySQL-Encoding/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x7F16;&amp;#x7801;&amp;#x9009;&amp;#x62E9;&amp;#x7684;&amp;#x4E00;&amp;#x822C;&amp;#x51C6;&amp;#x5219;:1&amp;#x3001;GBK/GB2312&amp;#x9002;&amp;#x5408;&amp;#x7EAF;&amp;#x4E2D;&amp;#x6587;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x5">
+<meta property="og:updated_time" content="2017-02-23T09:15:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL数据库编码问题如何解决">
+<meta name="twitter:description" content="&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x7F16;&amp;#x7801;&amp;#x9009;&amp;#x62E9;&amp;#x7684;&amp;#x4E00;&amp;#x822C;&amp;#x51C6;&amp;#x5219;:1&amp;#x3001;GBK/GB2312&amp;#x9002;&amp;#x5408;&amp;#x7EAF;&amp;#x4E2D;&amp;#x6587;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x5">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 16.67px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-MySQL-Encoding" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/23/MySQL-Encoding/" class="article-date">
+  	<time datetime="2017-02-23T08:49:18.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL数据库编码问题如何解决
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;"><a href="#&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;" class="headerlink" title="&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;:"></a>&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;:</h2><p>1&#x3001;GBK/GB2312<br>&#x9002;&#x5408;&#x7EAF;&#x4E2D;&#x6587;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x5E93;<br>2&#x3001;LATIN1<br>&#x9002;&#x5408;&#x4E8E;&#x7EAF;&#x82F1;&#x6587;&#x7684;&#x5B58;&#x50A8;<br>3&#x3001;UTF8<br>&#x9002;&#x5408;&#x4E2D;&#x82F1;&#x6587;&#x6DF7;&#x5408;&#x7F16;&#x7801;&#x7684;&#x5B58;&#x50A8;&#x3002;</p>
+<h2 id="MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;"><a href="#MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;" class="headerlink" title="MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;:"></a>MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;:</h2><h3 id="&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;"><a href="#&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;" class="headerlink" title="&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;"></a>&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;</h3><p>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x7F16;&#x8F91;MySql&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br>MySql&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;MacOSX&#x7CFB;&#x7EDF;&#x4E2D;&#x662F;&#x5728;/etc/my.cnf</p>
+<p>&#x2013;&#x5728; [mysqld] &#x6807;&#x7B7E;&#x4E0B;&#x52A0;&#x4E0A;&#x4E24;&#x884C;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">character_<span class="built_in">set</span>_server=utf8  </div><div class="line">init_connect=<span class="string">&apos;SET NAMES utf8&apos;</span></div></pre></td></tr></table></figure></p>
+<p>&#xFF08;2&#xFF09;&#x91CD;&#x65B0;&#x542F;&#x52A8;MySql&#x670D;&#x52A1;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysql start</div></pre></td></tr></table></figure></p>
+<p>&#xFF08;3&#xFF09;&#x67E5;&#x770B;&#x8BBE;&#x7F6E;&#x7ED3;&#x679C;<br>&#x767B;&#x5F55;MySql&#x547D;&#x4EE4;&#x884C;&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql &#x2013;u root &#x2013;p &#x56DE;&#x8F66;</div></pre></td></tr></table></figure></p>
+<p>&#x8F93;&#x5165;&#x5BC6;&#x7801;<br>&#x8FDB;&#x5165;mysql&#x540E; &#x6267;&#x884C; &#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&apos;%character%&apos;</span>;</div></pre></td></tr></table></figure></p>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#x5E94;&#x8BE5;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#xFF1A;<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+<br>| Variable_name            | Value                                          |<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+<br>| character_set_client     | utf8                                           |<br>| character_set_connection | utf8                                           |<br>| character_set_database   | utf8                                           |<br>| character_set_filesystem | binary                                         |<br>| character_set_results    | utf8                                           |<br>| character_set_server     | utf8                                           |<br>| character_set_system     | utf8                                           |<br>| character_sets_dir       | /Applications/XAMPP/xamppfiles/share/charsets/ |<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+</p>
+<p>&#xFF08;4&#xFF09;&#x5EFA;&#x5E93;&#x5BFC;&#x5165;&#x6570;&#x636E;<br>&#x5BFC;&#x5165;sql&#x811A;&#x672C;&#x6587;&#x4EF6;&#x524D;&#xFF0C;&#x5148;&#x786E;&#x4FDD;&#x8BE5;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x53CA;&#x5185;&#x5BB9;&#x683C;&#x5F0F;&#x4E3A;UTF-8&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;<br>&#x540C;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x767B;&#x5165;mysql&#x547D;&#x4EE4;&#x884C;&#xFF0C;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> &#x5E93;&#x540D;</div></pre></td></tr></table></figure></p>
+<p>&#x8FDB;&#x5165;&#x76F8;&#x5E94;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">names</span> utf8;</div><div class="line">source sql &#x811A;&#x672C;&#x6587;&#x4EF6;&#x540D;;</div></pre></td></tr></table></figure></p>
+<h3 id="&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;"><a href="#&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;" class="headerlink" title="&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;"></a>&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;1&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8</div></pre></td></tr></table></figure></p>
+<p>&#x65B9;&#x6CD5;2&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="keyword">charset</span>=utf8</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;DB&#x7684;&#x7F16;&#x7801;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
+<h3 id="&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;"><a href="#&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;" class="headerlink" title="&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;"></a>&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;1&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">......//&#x5B57;&#x6BB5;&#x4FE1;&#x606F;</div><div class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
+<p>&#x65B9;&#x6CD5;2&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">......//&#x5B57;&#x6BB5;&#x4FE1;&#x606F;</div><div class="line">)<span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x8868;table&#x7684;&#x7F16;&#x7801;:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8</div></pre></td></tr></table></figure></p>
+<h3 id="&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;"><a href="#&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;" class="headerlink" title="&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;"></a>&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">filed_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="built_in">character</span> <span class="keyword">set</span> utf8 //&#x6CE8;&#x610F;&#x4E0D;&#x80FD;&#x6709;<span class="keyword">default</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;field&#x7F16;&#x7801;&#xFF1A;<br>&#x65B9;&#x6CD5;:<br>&#x5047;&#x5982;&#x5B57;&#x6BB5;&#x7684;&#x9650;&#x5236;&#x662F; varchar(20) not null default &#x2018;&#x2019;;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">change</span> old_filed_name new_filed_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="string">&apos;abc&apos;</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
+<p>change&#x548C;modify&#x7684;&#x533A;&#x522B;&#xFF0C;modify&#x53EA;&#x80FD;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x5C5E;&#x6027;&#xFF0C;change&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x540D;&#x3002;</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/23/MySQL-ENUM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          MySQL enum用法--实现类似check的输入约束
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/22/How-to-update-AICompanion/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">怎样更新App Inventor 模拟器中的AI伴侣app？</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

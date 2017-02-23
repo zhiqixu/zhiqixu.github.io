@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Android中如何读取txt文件的内容以及其编码问题 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546//&amp;#x8BFB;&amp;#x53D6;&amp;#x6587;&amp;#x672C;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;public static String ReadTxtFile(St">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android中如何读取txt文件的内容以及其编码问题">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/Android-ReadTxt/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546//&amp;#x8BFB;&amp;#x53D6;&amp;#x6587;&amp;#x672C;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;public static String ReadTxtFile(St">
+<meta property="og:updated_time" content="2017-02-23T12:33:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android中如何读取txt文件的内容以及其编码问题">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546//&amp;#x8BFB;&amp;#x53D6;&amp;#x6587;&amp;#x672C;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;public static String ReadTxtFile(St">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 16.67px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Android-ReadTxt" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/23/Android-ReadTxt/" class="article-date">
+  	<time datetime="2017-02-23T12:29:56.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android中如何读取txt文件的内容以及其编码问题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">ReadTxtFile</span><span class="params">(String strFilePath)</span></span></div><div class="line">{</div><div class="line">    String path = strFilePath;</div><div class="line">    String content = <span class="string">&quot;&quot;</span>; <span class="comment">//&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">    <span class="comment">//&#x6253;&#x5F00;&#x6587;&#x4EF6;</span></div><div class="line">    File file = <span class="keyword">new</span> File(path);</div><div class="line">    <span class="comment">//&#x5982;&#x679C;path&#x662F;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;&#x975E;&#x76EE;&#x5F55;&#x7684;&#x5224;&#x65AD;</span></div><div class="line">    <span class="keyword">if</span> (file.isDirectory())</div><div class="line">    {</div><div class="line">        Log.d(<span class="string">&quot;TestFile&quot;</span>, <span class="string">&quot;The File doesn&apos;t not exist.&quot;</span>);</div><div class="line">    }</div><div class="line">    <span class="keyword">else</span></div><div class="line">    {</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            InputStream instream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">            InputStreamReader inputStreamReader = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                inputStreamReader = <span class="keyword">new</span> InputStreamReader(instream, <span class="string">&quot;utf-8&quot;</span>);</div><div class="line">            } <span class="keyword">catch</span> (UnsupportedEncodingException e1) {</div><div class="line">                e1.printStackTrace();</div><div class="line">            }</div><div class="line">            BufferedReader reader = <span class="keyword">new</span> BufferedReader(inputStreamReader);</div><div class="line">            StringBuffer sb = <span class="keyword">new</span> StringBuffer(<span class="string">&quot;&quot;</span>);</div><div class="line">            String line;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) {</div><div class="line">                    sb.append(line);</div><div class="line">                    sb.append(<span class="string">&quot;\n&quot;</span>);</div><div class="line">                }</div><div class="line">            } <span class="keyword">catch</span> (IOException e) {</div><div class="line">                e.printStackTrace();</div><div class="line">            }</div><div class="line">            content = sb.toString();</div><div class="line">        }</div><div class="line">        <span class="keyword">catch</span> (java.io.FileNotFoundException e)</div><div class="line">        {</div><div class="line">            Log.d(<span class="string">&quot;TestFile&quot;</span>, <span class="string">&quot;The File doesn&apos;t not exist.&quot;</span>);</div><div class="line">        }</div><div class="line">        <span class="keyword">catch</span> (IOException e)</div><div class="line">        {</div><div class="line">            Log.d(<span class="string">&quot;TestFile&quot;</span>, e.getMessage());</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> content;</div><div class="line">}</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Android中Mipmap和Drawable的区别
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/23/MySQL-UserAndPrivilege/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">查看MariaDB(MYSQL)数据库中用户及其拥有权限</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
