@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Hexo | Shmily&#39;s Blog</title>
+  <title>Hexo+Git 搭建Blog时需要注意的地方 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shmily's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Hexo/index.html">
+  <meta name="description" content="&amp;#x5BF9;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x535A;&amp;#x6587;&amp;#x8FDB;&amp;#x884C;&amp;#x8865;&amp;#x5145;&amp;#xFF1A;&amp;#xFF08;1&amp;#xFF09;&amp;#x5728;&amp;#x5B89;&amp;#x88C5;&amp;#x5B8C;Git&amp;#x4E4B;&amp;#x540E;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x5BF9;SSH&amp;#x8FDB;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Git 搭建Blog时需要注意的地方">
+<meta property="og:url" content="http://yoursite.com/2017/02/24/Git-SSH/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x5BF9;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x535A;&amp;#x6587;&amp;#x8FDB;&amp;#x884C;&amp;#x8865;&amp;#x5145;&amp;#xFF1A;&amp;#xFF08;1&amp;#xFF09;&amp;#x5728;&amp;#x5B89;&amp;#x88C5;&amp;#x5B8C;Git&amp;#x4E4B;&amp;#x540E;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x5BF9;SSH&amp;#x8FDB;&amp;">
+<meta property="og:updated_time" content="2017-02-24T06:12:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shmily's Blog">
+<meta name="twitter:title" content="Hexo+Git 搭建Blog时需要注意的地方">
+<meta name="twitter:description" content="&amp;#x5BF9;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x535A;&amp;#x6587;&amp;#x8FDB;&amp;#x884C;&amp;#x8865;&amp;#x5145;&amp;#xFF1A;&amp;#xFF08;1&amp;#xFF09;&amp;#x5728;&amp;#x5B89;&amp;#x88C5;&amp;#x5B8C;Git&amp;#x4E4B;&amp;#x540E;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x5BF9;SSH&amp;#x8FDB;&amp;">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -164,156 +168,92 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Git-SSH" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/24/Git-SSH/" class="archive-article-date">
-  	<time datetime="2017-02-24T06:00:07.000Z" itemprop="datePublished">2月 24</time>
+    <div class="article-meta">
+      <a href="/2017/02/24/Git-SSH/" class="article-date">
+  	<time datetime="2017-02-24T06:00:07.000Z" itemprop="datePublished">2017-02-24</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/24/Git-SSH/">Hexo+Git 搭建Blog时需要注意的地方</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+Git 搭建Blog时需要注意的地方
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+      </div>
       
-        </div></section>
+    
+    <div class="article-entry" itemprop="articleBody">
       
+        <p>&#x5BF9;&#x4E4B;&#x524D;&#x7684;&#x535A;&#x6587;&#x8FDB;&#x884C;&#x8865;&#x5145;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x5728;&#x5B89;&#x88C5;&#x5B8C;Git&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5BF9;SSH&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
+<ul>
+<li><p>&#x68C0;&#x67E5;SSH key</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5907;&#x4EFD;&#x5DF2;&#x6709;&#x7684;key&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir key_backup</div><div class="line">mv id_rsa* key_backup</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x751F;&#x6210;SSH key</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &#x201C;xxx@xxx.com&#x201D;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;Github<br>&#x767B;&#x5F55;&#x5230;GitHub&#x9875;&#x9762;&#xFF0C;Account Settings-&gt;SSH Public Keys-&gt;Add another key&#x5C06;&#x751F;&#x6210;&#x7684;key(id_rsa.pub&#x6587;&#x4EF6;&#xFF09;&#x5185;&#x5BB9;copy&#x5230;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#xFF0C;save&#x3002;</p>
+</li>
+<li><p>&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x8BBE;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &#x201D;xxx&#x201D;</div><div class="line">git config --global user.email xxx@xxx.com</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&#xFF08;2&#xFF09;&#x4FEE;&#x6539;hexo&#x6839;&#x76EE;&#x5F55;&#x4E0B;_config.yml&#x6587;&#x4EF6;&#xFF08;xxx&#x4E3A;&#x4F60;&#x7684;github&#x8D26;&#x6237;&#x540D;&#x79F0;&#xFF09;<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: github</div><div class="line">  repo: git@github.com:xxx/xxx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/20/Hexo-Read-Images/" class="archive-article-date">
-  	<time datetime="2016-07-20T02:07:00.000Z" itemprop="datePublished">7月 20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/Hexo-Read-Images/">Hexo中使用本地图片需要的注意点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android中Mipmap和Drawable的区别</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/10/Hexo-Git-Blog/" class="archive-article-date">
-  	<time datetime="2016-07-10T12:49:39.000Z" itemprop="datePublished">7月 10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/10/Hexo-Git-Blog/">Hexo+Git 搭建Blog</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/08/hello-world/" class="archive-article-date">
-  	<time datetime="2016-07-08T04:18:02.000Z" itemprop="datePublished">7月 8</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/08/hello-world/">Hello World With Hexo!</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
 
 </div>
       <footer id="footer">
@@ -339,9 +279,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
