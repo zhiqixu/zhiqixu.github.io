@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 12.5px;">Android</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
+						<a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,78 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Hexo-Read-Images" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/20/Hexo-Read-Images/" class="article-date">
+  	<time datetime="2016-07-20T02:07:00.000Z" itemprop="datePublished">2016-07-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/20/Hexo-Read-Images/">Hexo中使用本地图片需要的注意点</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x3010;&#x8F6C;&#x81EA;<a href="https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/?utm_source=tuicool&amp;utm_medium=referral</a> &#x3011;</p>
+<h2 id="&#x8D77;&#x56E0;"><a href="#&#x8D77;&#x56E0;" class="headerlink" title="&#x8D77;&#x56E0;"></a>&#x8D77;&#x56E0;</h2><p>&#x5728; hexo &#x4E2D;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x56FE;&#x7247;&#x662F;&#x4EF6;&#x975E;&#x5E38;&#x8BA9;&#x4EBA;&#x7EA0;&#x7ED3;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5728; markdown &#x91CC;&#x7684;&#x56FE;&#x7247;&#x5730;&#x5740;&#x4F3C;&#x4E4E;&#x6C38;&#x8FDC;&#x65E0;&#x6CD5;&#x548C;&#x6700;&#x540E;&#x751F;&#x6210;&#x7684;&#x7F51;&#x9875;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2><p><a href="https://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/%22https://github.com/CodeFalling/hexo-asset-image%22" target="_blank" rel="external">CodeFalling/hexo-asset-image</a></p>
+<ol>
+<li><p>&#x9996;&#x5148;&#x786E;&#x8BA4; _config.yml &#x4E2D;&#x6709; post_asset_folder:true &#x3002;</p>
+</li>
+<li><p>&#x5728; hexo &#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure>
+<p>&#x5047;&#x8BBE;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x76EE;&#x5F55;&#x540D;&#x548C;&#x6587;&#x7AE0;&#x540D;&#x4E00;&#x81F4;&#xFF09;&#xFF1A;<br>MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg<br>MacGesture2-Publish.md</p>
+<p>&#x53EA;&#x8981;&#x4F7F;&#x7528; ![logo] (MacGesture2-Publish/logo.jpg) &#x6216;&#x8005;![logo] (logo.jpg)&#x5C31;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x3002;</p>
+<p>&#x751F;&#x6210;&#x7684;&#x7ED3;&#x6784;&#x4E3A;&#xFF1A;<br>public/2016/07/20/MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; index.html<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg</p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x751F;&#x6210;&#x7684; html &#x662F;&#xFF1A;<br>&lt; img src=&#x201D;/2015/10/18/MacGesture2-Publish/logo.jpg&#x201D; alt=&#x201D;logo&#x201D; &gt;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-App-Inventor-DesignRules" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -919,76 +991,9 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/08/hello-world/" class="article-date">
-  	<time datetime="2016-07-08T04:18:02.000Z" itemprop="datePublished">2016-07-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/08/hello-world/">Hello World With Hexo!</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is the very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
