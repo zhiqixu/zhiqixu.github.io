@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>【转】gradle与gradle wrapper关系，以及版本关系 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
+gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转】gradle与gradle wrapper关系，以及版本关系">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/Android-Gradle-GradleWrapper/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
+gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
+<meta property="og:updated_time" content="2017-03-03T08:26:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【转】gradle与gradle wrapper关系，以及版本关系">
+<meta name="twitter:description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
+gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 12.5px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Android-Gradle-GradleWrapper" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/03/Android-Gradle-GradleWrapper/" class="article-date">
+  	<time datetime="2017-03-03T08:03:53.000Z" itemprop="datePublished">2017-03-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【转】gradle与gradle wrapper关系，以及版本关系
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/klx502/article/details/50762059" target="_blank" rel="external">http://blog.csdn.net/klx502/article/details/50762059</a></p>
+<h2 id="gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">distributionUrl=https\:<span class="comment">//services.gradle.org/distributions/gradle-2.8-all.zip</span></div></pre></td></tr></table></figure>
+<h2 id="build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript {</div><div class="line">    repositories {</div><div class="line">        jcenter()</div><div class="line">    }</div><div class="line">    dependencies {</div><div class="line">        classpath <span class="string">&apos;com.android.tools.build:gradle:1.5.0&apos;</span></div><div class="line"></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"><a href="#&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;" class="headerlink" title="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"></a>&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;</h2><p>&#x95EE;&#xFF1A;<br>&#x5728;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E0E;gradle&#x76F8;&#x5173;&#x4F46;&#x662F;&#x7528;&#x5230;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;&#x3002;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x7684;&#x5173;&#x7CFB;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;gradle wrapper&#x4F5C;&#x7528;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<p>&#x7B54;:<br>gradle wrapper task&#x5229;&#x7528;gradle-wrapper.properties&#x6765;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7684;gradle&#x3002;</p>
+<p>build.gradle&#x4E2D;classpath &#x2018;com.android.tools.build:gradle:1.5.0&#x2019;&#x8868;&#x793A;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;android plugin&#x7684;&#x5E93;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;android plugin&#x662F;&#x5BF9;gradle&#x5E93;&#x7684;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x524D;&#x8005;&#x662F;gradle&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5F53;&#x65F6;&#x6B63;&#x5F0F;&#x7248;&#x6700;&#x65B0;&#x7684;&#x662F;2.9&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5230;&#x8FD9;&#x91CC;&#x4E0B;&#x8F7D;<a href="https://services.gradle.org/distributions&#xFF1B;" target="_blank" rel="external">https://services.gradle.org/distributions&#xFF1B;</a><br>&#x540E;&#x8005;&#x662F;android plugin&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5F53;&#x65F6;&#x6B63;&#x5F0F;&#x7248;&#x672C;&#x6700;&#x65B0;&#x662F;1.5.0&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5230;&#x8FD9;&#x91CC;&#x6765;&#x4E0B;&#x8F7D;<a href="https://jcenter.bintray.com/com/android/tools/build/gradle/1.5.0/&#x3002;" target="_blank" rel="external">https://jcenter.bintray.com/com/android/tools/build/gradle/1.5.0/&#x3002;</a></p>
+<h2 id="&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;"><a href="#&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;" class="headerlink" title="&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;"></a>&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;</h2><p>&#x53EF;&#x53C2;&#x89C1;<a href="http://blog.csdn.net/rodulf/article/details/50679928&#x3002;" target="_blank" rel="external">http://blog.csdn.net/rodulf/article/details/50679928&#x3002;</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/24/Android-Update-Gradel-Manually/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何解决Android Studio Refreshing Gradle Project 编译更新Gradle卡住问题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
