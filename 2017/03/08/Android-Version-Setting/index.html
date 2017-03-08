@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Android Studio 使用Support.v7和support.v4包遇到的各种问题 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x5982;&amp;#x679C;&amp;#x5728;Android Studio&amp;#x4E2D;&amp;#x6253;&amp;#x5F00;&amp;#x9879;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&amp;#x4E86;&amp;#x5982;&amp;#x4E0B;Error&amp;#xFF1A;Failed to resolve: com.android.support:appcompat-v7:2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio 使用Support.v7和support.v4包遇到的各种问题">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/Android-Version-Setting/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x5982;&amp;#x679C;&amp;#x5728;Android Studio&amp;#x4E2D;&amp;#x6253;&amp;#x5F00;&amp;#x9879;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&amp;#x4E86;&amp;#x5982;&amp;#x4E0B;Error&amp;#xFF1A;Failed to resolve: com.android.support:appcompat-v7:2">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/error.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/compileSdkVersion.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/support.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/support-modified.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/sdk update.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/sdk tools update.png">
+<meta property="og:updated_time" content="2017-03-08T07:42:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Studio 使用Support.v7和support.v4包遇到的各种问题">
+<meta name="twitter:description" content="&amp;#x5982;&amp;#x679C;&amp;#x5728;Android Studio&amp;#x4E2D;&amp;#x6253;&amp;#x5F00;&amp;#x9879;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&amp;#x4E86;&amp;#x5982;&amp;#x4E0B;Error&amp;#xFF1A;Failed to resolve: com.android.support:appcompat-v7:2">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/08/Android-Version-Setting/error.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 12.5px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Android-Version-Setting" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/08/Android-Version-Setting/" class="article-date">
+  	<time datetime="2017-03-08T03:53:05.000Z" itemprop="datePublished">2017-03-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Studio 使用Support.v7和support.v4包遇到的各种问题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x5982;&#x679C;&#x5728;Android Studio&#x4E2D;&#x6253;&#x5F00;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x4E86;&#x5982;&#x4E0B;Error&#xFF1A;<br>Failed to resolve: com.android.support:appcompat-v7:25.0.2&#xFF08;&#x4E0B;&#x56FE;&#x4E2D;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF09;<br><img src="/2017/03/08/Android-Version-Setting/error.png" alt=""></p>
+<p>&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E8E;compileSdkVersion&#x548C;buildToolsVersion&#x5BF9;&#x5E94;&#x7684;&#x7248;&#x672C;&#x548C;&#x5BFC;&#x5165;&#x7684;v7&#x5305;&#x8981;&#x6C42;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h2 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;"></a>&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;</h2><p>&#x5728;&#x4E0B;&#x56FE;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF0C;&#x63CF;&#x8FF0;&#x7684;&#x5373;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x7684;compileSdkVersion&#x7248;&#x672C;&#x3002;<br><img src="/2017/03/08/Android-Version-Setting/compileSdkVersion.png" alt=""></p>
+<h2 id="&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;</h2><p>&#x5728;&#x4E0A;&#x56FE;&#x9EC4;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF0C;&#x660E;&#x663E;&#x53EF;&#x89C1;&#x7EA2;&#x8272;&#x6CE2;&#x6D6A;&#x7EBF;&#xFF0C;&#x8FD9;&#x5C31;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x6B64;&#x5904;&#x6709;&#x9519;&#x8BEF;&#x3002;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x8FC7;&#x53BB;&#xFF0C;&#x53EF;&#x89C1;&#x63D0;&#x9192;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/support.png" alt=""><br>&#x8FD9;&#x662F;&#x6307;&#x5F53;&#x524D;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;support&#x5305;&#x7248;&#x672C;&#x4E0E;compileSdkVersion&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x53EA;&#x6709;&#x8BBE;&#x7F6E;&#x6210;&#x4E00;&#x81F4;&#x80FD;&#x80FD;&#x8BA9;APP&#x6210;&#x529F;&#x8FD0;&#x884C;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/support-modified.png" alt=""></p>
+<h2 id="&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;"><a href="#&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;"></a>&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;</h2><h3 id="&#xFF08;1&#xFF09;minSDK-VS-targetSDK&#xFF1A;"><a href="#&#xFF08;1&#xFF09;minSDK-VS-targetSDK&#xFF1A;" class="headerlink" title="&#xFF08;1&#xFF09;minSDK VS targetSDK&#xFF1A;"></a>&#xFF08;1&#xFF09;minSDK VS targetSDK&#xFF1A;</h3><p>&#x8FD9;&#x4E24;&#x8005;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x5230;targetSDK&#x4E2D;&#x6700;&#x65B0;&#x7684;API&#x548C;&#x6700;&#x9177;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x4F60;&#x53C8;&#x4E0D;&#x5F97;&#x4E0D;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x5230;minSDK&#xFF0C;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x8BBE;&#x5907;&#x90FD;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7684;&#x8FD0;&#x884C;&#x4F60;&#x7684;app&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;Android&#x521A;&#x521A;&#x63A8;&#x51FA;&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x8FD9;&#x5BF9;&#x4E8E;&#x4F60;&#x7684;app&#x53C8;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x65B0;&#x7279;&#x6027;&#x7684;SDK&#x7248;&#x672C;&#xFF0C;minSDK&#x8BBE;&#x7F6E;&#x6210;&#x4F4E;&#x7248;&#x672C;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F60;&#x7684;app&#x3002;</p>
+<p>&#x4F8B;&#x5B50;1&#xFF1A;&#x5047;&#x5982;&#x4F60;&#x60F3;&#x7ED9;&#x4F60;&#x7684;app&#x52A0;&#x5165;&#x5927;&#x91CF;&#x7684;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#xFF08;sdk 7&#x624D;&#x5F15;&#x5165;&#x7684;&#xFF09;&#xFF0C;&#x7136;&#x800C;&#x8FD9;&#x4E9B;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;Button&#x6216;menu&#x7B49;&#x4EE3;&#x66FF;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x52A0;&#x5206;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x5C31;&#x9700;&#x8981;&#x628A;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;7&#xFF0C;&#x628A;minSDK&#x8BBE;&#x7F6E;&#x4E3A;3&#xFF08;&#x8FD9;&#x662F;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x73B0;&#x5728;&#x6CA1;&#x4EBA;&#x8FD8;&#x5728;&#x7528;&#x8FD9;&#x4E48;&#x8001;&#x7684;&#x8BBE;&#x5907;&#x4E86;&#xFF09;&#x8FD9;&#x6837;&#x5373;&#x4F7F;&#x662F;&#x4F7F;&#x7528;&#x8001;&#x8BBE;&#x5907;&#x7684;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F60;&#x7684;app&#x4E86;&#x3002;&#x7136;&#x540E;&#x4F60;&#x6240;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x5224;&#x65AD;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;7&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C31;&#x4F7F;&#x7528;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#xFF0C;&#x5C0F;&#x4E8E;7&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C31;&#x4F7F;&#x7528;button&#x7B49;&#x4EE3;&#x66FF;&#xFF0C;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4E86;&#x65B0;&#x624B;&#x673A;&#x7684;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x4F53;&#x9A8C;&#x5230;&#x4F60;app&#x4E2D;&#x9177;&#x70AB;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;2&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7ED9;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x52A0;&#x5165;Android 5.0&#x7684;Material Design&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x4F1A;&#x5347;&#x7EA7;&#x5230;5.0&#x800C;&#x4F7F;&#x7528;&#x5230;&#x4F60;&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x800C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x7528;&#x6237;&#x7684;&#x624B;&#x673A;&#x786C;&#x4EF6;&#x592A;&#x8001;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x5347;&#x7EA7;&#x5230;5.0&#xFF0C;&#x9664;&#x975E;&#x4ED6;&#x4EEC;&#x6362;&#x65B0;&#x624B;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x8981;&#x4E3A;&#x4ED6;&#x4EEC;&#x8FDB;&#x884C;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x4E0D;&#x81F3;&#x4E8E;&#x635F;&#x5931;&#x8FD9;&#x90E8;&#x5206;&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x6837;&#x4F60;&#x7684;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;21&#xFF0C;minSDK&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;8&#x3002;</p>
+<h3 id="&#xFF08;2&#xFF09;buildToolsVersion-VS-compileSdkVersion"><a href="#&#xFF08;2&#xFF09;buildToolsVersion-VS-compileSdkVersion" class="headerlink" title="&#xFF08;2&#xFF09;buildToolsVersion VS compileSdkVersion"></a>&#xFF08;2&#xFF09;buildToolsVersion VS compileSdkVersion</h3><ul>
+<li>CompileSdkVersion&#x662F;&#x4F60;SDK&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;API Level&#xFF0C;&#x4F8B;&#x5982;API-19&#x3001;API-20&#x3001;API-21&#x7B49;&#x7B49;&#x3002;</li>
+<li>buildeToolVersion&#x662F;&#x4F60;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x4E86;&#x6253;&#x5305;&#x5DE5;&#x5177;aapt&#x3001;dx&#x7B49;&#x7B49;&#x3002;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x76EE;&#x5F55;&#x4F4D;&#x4E8E;..your_sdk_path/build-tools/XX.XX.XX&#x3002;&#x4F8B;&#x5982;&#x6700;&#x65B0;&#x7684;build-tool&#x7684;&#x7248;&#x672C;&#x5C31;&#x662F;25.0.2&#x3002;</li>
+<li><p>&#x5728;android studio&#x4E2D;&#x662F;&#x5FC5;&#x987B;&#x5728;build.gradle&#x4E2D;&#x8BBE;&#x7F6E;buildToolsVersion&#x3002;&#x4F8B;&#x5982;&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">compileSdkVersion 22</div><div class="line">buildToolsVersion <span class="string">&quot;25.0.2&quot;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x9AD8;&#x7248;&#x672C;&#x7684;build-tool&#x53BB;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4E;&#x7248;&#x672C;&#x7684;sdk&#x5DE5;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;build-tool&#x7684;&#x7248;&#x672C;&#x4E3A;20&#xFF0C;&#x53BB;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;sdk&#x7248;&#x672C;&#x4E3A;18&#x7684;&#x3002;</p>
+</li>
+</ul>
+<p>&#x53E6;&#x5916;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6B63;&#x5982;&#x5149;&#x6807;&#x63D0;&#x793A;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4E2D;&#x8BB2;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x5019;&#x4E3A;&#x4E86;&#x80FD;&#x4F53;&#x9A8C;&#x5230;&#x6700;&#x65B0;&#x7684;Android&#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x6700;&#x65B0;&#x7684;SDK&#x66F4;&#x65B0;&#xFF0C;&#x8FD9;&#x4F1A;&#x540C;&#x65F6;&#x628A;build-Tools&#x4E5F;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x4E0B;&#x4E8C;&#x56FE;&#x6240;&#x793A;&#xFF08;AS2.3&#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C06;&#x4E0D;&#x518D;&#x63D0;&#x4F9B;&#x72EC;&#x7ACB;&#x7684;SDK Manager&#x7A0B;&#x5E8F;&#xFF09;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/sdk update.png" alt=""><br><img src="/2017/03/08/Android-Version-Setting/sdk tools update.png" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/03/Android-Gradle-GradleWrapper/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【转】gradle与gradle wrapper关系，以及版本关系</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
