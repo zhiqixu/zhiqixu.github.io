@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/23/MySQL-ENUM/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
 <meta property="og:description" content="&amp;#x5C3D;&amp;#x7BA1;MySQL&amp;#x5BF9;check&amp;#x4EC5;&amp;#x7F16;&amp;#x8BD1;&amp;#x4E0D;&amp;#x6267;&amp;#x884C;&amp;#xFF0C;&amp;#x5C3D;&amp;#x7BA1;&amp;#x628A;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x8F93;&amp;#x5165;&amp;#x7EA6;&amp;#x675F;&amp;#x653E;&amp;#x5728;&amp;#x4E1A;&amp;#x52A">
-<meta property="og:updated_time" content="2017-02-23T09:10:32.000Z">
+<meta property="og:updated_time" content="2017-03-13T05:16:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL enum用法--实现类似check的输入约束">
 <meta name="twitter:description" content="&amp;#x5C3D;&amp;#x7BA1;MySQL&amp;#x5BF9;check&amp;#x4EC5;&amp;#x7F16;&amp;#x8BD1;&amp;#x4E0D;&amp;#x6267;&amp;#x884C;&amp;#xFF0C;&amp;#x5C3D;&amp;#x7BA1;&amp;#x628A;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x8F93;&amp;#x5165;&amp;#x7EA6;&amp;#x675F;&amp;#x653E;&amp;#x5728;&amp;#x4E1A;&amp;#x52A">
@@ -73,7 +73,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -205,7 +205,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x5C3D;&#x7BA1;MySQL&#x5BF9;check&#x4EC5;&#x7F16;&#x8BD1;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x5C3D;&#x7BA1;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x8F93;&#x5165;&#x7EA6;&#x675F;&#x653E;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#x53BB;&#x5B9E;&#x73B0;&#x624D;&#x662F;&#x738B;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x521B;&#x5EFA;table&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x8F93;&#x5165;&#x503C;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x68C0;&#x67E5;&#x3002;<br>&#x6B64;&#x65F6;&#x7528;enum&#x80FD;&#x5B9E;&#x73B0;&#x76F8;&#x4F3C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x6027;&#x522B;&#x201C;&#x7537;&#x201D;&#x6216;&#x201C;&#x5973;&#x201D;&#x7684;&#x8F93;&#x5165;&#x53D7;&#x9650;&#xFF1A;<br>&#x521B;&#x5EFA;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868;(</div><div class="line">.......</div><div class="line">&#x6027;&#x522B; <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">not</span> <span class="literal">null</span> enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>),</div><div class="line">.......</div><div class="line">)</div><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868; <span class="keyword">modify</span> <span class="keyword">column</span> &#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>)</div></pre></td></tr></table></figure></p>
+        <p>&#x5C3D;&#x7BA1;MySQL&#x5BF9;check&#x4EC5;&#x7F16;&#x8BD1;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x5C3D;&#x7BA1;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x8F93;&#x5165;&#x7EA6;&#x675F;&#x653E;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#x53BB;&#x5B9E;&#x73B0;&#x624D;&#x662F;&#x738B;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x521B;&#x5EFA;table&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x8F93;&#x5165;&#x503C;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x68C0;&#x67E5;&#x3002;<br>&#x6B64;&#x65F6;&#x7528;enum&#x80FD;&#x5B9E;&#x73B0;&#x76F8;&#x4F3C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x6027;&#x522B;&#x201C;&#x7537;&#x201D;&#x6216;&#x201C;&#x5973;&#x201D;&#x7684;&#x8F93;&#x5165;&#x53D7;&#x9650;&#xFF1A;<br>&#x521B;&#x5EFA;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868;(</div><div class="line">.......</div><div class="line">&#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>) <span class="keyword">not</span> <span class="literal">null</span> ,</div><div class="line">.......</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868; <span class="keyword">modify</span> <span class="keyword">column</span> &#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>)</div></pre></td></tr></table></figure></p>
 
       
     </div>
