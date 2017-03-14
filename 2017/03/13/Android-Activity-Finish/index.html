@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>App Inventor 开发平台网址 | Shmily&#39;s Blog</title>
+  <title>【转】Activity中的finish() VS OnDestroy() | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x5E7F;&amp;#x5DDE;&amp;#x6559;&amp;#x80B2;&amp;#x4FE1;&amp;#x606F;&amp;#x4E2D;&amp;#x5FC3;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x56FD;&amp;#x5185;App Inventor&amp;#x6C49;&amp;#x5316;&amp;#x6D4B;&amp;#x8BD5;&amp;#x7248;&amp;#xFF08;&amp;#x65E0;&amp;#x8D26;&amp;#x53F7;&amp;#x6A21;&amp;#x5">
+  <meta name="description" content="Activity.finish()Call this when your activity is done and should be closed.&amp;#x5728;&amp;#x4F60;&amp;#x7684;activity&amp;#x52A8;&amp;#x4F5C;&amp;#x5B8C;&amp;#x6210;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;Activity&amp;#x97">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App Inventor 开发平台网址">
-<meta property="og:url" content="http://yoursite.com/2016/07/11/App-Inventor-DevPlatform/index.html">
+<meta property="og:title" content="【转】Activity中的finish() VS OnDestroy()">
+<meta property="og:url" content="http://yoursite.com/2017/03/13/Android-Activity-Finish/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
-<meta property="og:description" content="&amp;#x5E7F;&amp;#x5DDE;&amp;#x6559;&amp;#x80B2;&amp;#x4FE1;&amp;#x606F;&amp;#x4E2D;&amp;#x5FC3;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x56FD;&amp;#x5185;App Inventor&amp;#x6C49;&amp;#x5316;&amp;#x6D4B;&amp;#x8BD5;&amp;#x7248;&amp;#xFF08;&amp;#x65E0;&amp;#x8D26;&amp;#x53F7;&amp;#x6A21;&amp;#x5">
-<meta property="og:updated_time" content="2016-07-11T04:09:07.000Z">
+<meta property="og:description" content="Activity.finish()Call this when your activity is done and should be closed.&amp;#x5728;&amp;#x4F60;&amp;#x7684;activity&amp;#x52A8;&amp;#x4F5C;&amp;#x5B8C;&amp;#x6210;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;Activity&amp;#x97">
+<meta property="og:updated_time" content="2017-03-13T08:04:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App Inventor 开发平台网址">
-<meta name="twitter:description" content="&amp;#x5E7F;&amp;#x5DDE;&amp;#x6559;&amp;#x80B2;&amp;#x4FE1;&amp;#x606F;&amp;#x4E2D;&amp;#x5FC3;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x56FD;&amp;#x5185;App Inventor&amp;#x6C49;&amp;#x5316;&amp;#x6D4B;&amp;#x8BD5;&amp;#x7248;&amp;#xFF08;&amp;#x65E0;&amp;#x8D26;&amp;#x53F7;&amp;#x6A21;&amp;#x5">
+<meta name="twitter:title" content="【转】Activity中的finish() VS OnDestroy()">
+<meta name="twitter:description" content="Activity.finish()Call this when your activity is done and should be closed.&amp;#x5728;&amp;#x4F60;&amp;#x7684;activity&amp;#x52A8;&amp;#x4F5C;&amp;#x5B8C;&amp;#x6210;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;Activity&amp;#x97">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -168,11 +168,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-App-Inventor-DevPlatform" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android-Activity-Finish" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/11/App-Inventor-DevPlatform/" class="article-date">
-  	<time datetime="2016-07-11T04:02:21.000Z" itemprop="datePublished">2016-07-11</time>
+      <a href="/2017/03/13/Android-Activity-Finish/" class="article-date">
+  	<time datetime="2017-03-13T08:02:00.000Z" itemprop="datePublished">2017-03-13</time>
 </a>
     </div>
   
@@ -185,7 +185,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      App Inventor 开发平台网址
+      【转】Activity中的finish() VS OnDestroy()
     </h1>
   
 
@@ -194,7 +194,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App-Inventor/">App Inventor</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
         
@@ -205,7 +205,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="&#x5E7F;&#x5DDE;&#x6559;&#x80B2;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#x670D;&#x52A1;&#x5668;"><a href="#&#x5E7F;&#x5DDE;&#x6559;&#x80B2;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x5E7F;&#x5DDE;&#x6559;&#x80B2;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#x670D;&#x52A1;&#x5668;"></a><a href="http://app.gzjkw.net/" target="_blank" rel="external">&#x5E7F;&#x5DDE;&#x6559;&#x80B2;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#x670D;&#x52A1;&#x5668;</a></h3><h3 id="&#x56FD;&#x5185;App-Inventor&#x6C49;&#x5316;&#x6D4B;&#x8BD5;&#x7248;&#xFF08;&#x65E0;&#x8D26;&#x53F7;&#x6A21;&#x5F0F;&#xFF09;"><a href="#&#x56FD;&#x5185;App-Inventor&#x6C49;&#x5316;&#x6D4B;&#x8BD5;&#x7248;&#xFF08;&#x65E0;&#x8D26;&#x53F7;&#x6A21;&#x5F0F;&#xFF09;" class="headerlink" title="&#x56FD;&#x5185;App Inventor&#x6C49;&#x5316;&#x6D4B;&#x8BD5;&#x7248;&#xFF08;&#x65E0;&#x8D26;&#x53F7;&#x6A21;&#x5F0F;&#xFF09;"></a><a href="http://ai2.17coding.net/" target="_blank" rel="external">&#x56FD;&#x5185;App Inventor&#x6C49;&#x5316;&#x6D4B;&#x8BD5;&#x7248;&#xFF08;&#x65E0;&#x8D26;&#x53F7;&#x6A21;&#x5F0F;&#xFF09;</a></h3><h3 id="MIT&#x5B98;&#x65B9;&#x5E73;&#x53F0;"><a href="#MIT&#x5B98;&#x65B9;&#x5E73;&#x53F0;" class="headerlink" title="MIT&#x5B98;&#x65B9;&#x5E73;&#x53F0;"></a><a href="http://ai2.appinventor.mit.edu/" target="_blank" rel="external">MIT&#x5B98;&#x65B9;&#x5E73;&#x53F0;</a></h3><h3 id="Extension&#x5185;&#x6D4B;&#x7F51;&#x5740;"><a href="#Extension&#x5185;&#x6D4B;&#x7F51;&#x5740;" class="headerlink" title="Extension&#x5185;&#x6D4B;&#x7F51;&#x5740;"></a><a href="http://extension-test.appinventor.mit.edu/" target="_blank" rel="external">Extension&#x5185;&#x6D4B;&#x7F51;&#x5740;</a></h3>
+        <p>Activity.finish()<br>Call this when your activity is done and should be closed.<br>&#x5728;&#x4F60;&#x7684;activity&#x52A8;&#x4F5C;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6216;&#x8005;Activity&#x9700;&#x8981;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EA;&#x662F;&#x5C06;&#x6700;&#x4E0A;&#x9762;&#x7684;Activity&#x79FB;&#x51FA;&#x4E86;&#x6808;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x7684;&#x8C03;&#x7528;onDestory&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x4E5F;&#x6CA1;&#x6709;&#x88AB;&#x53CA;&#x65F6;&#x91CA;&#x653E;&#x3002;&#x56E0;&#x4E3A;&#x79FB;&#x51FA;&#x4E86;&#x6808;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x4F60;&#x70B9;&#x51FB;&#x624B;&#x673A;&#x4E0A;&#x9762;&#x7684;&#x201C;back&#x201D;&#x6309;&#x952E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x518D;&#x627E;&#x5230;&#x8FD9;&#x4E2A;Activity&#x3002;&#x6362;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;finish&#x51FD;&#x6570;&#x4EC5;&#x4EC5;&#x628A;&#x5F53;&#x524D;Activity&#x9000;&#x51FA;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x6CA1;&#x6709;&#x91CA;&#x653E;&#x4ED6;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x4F55;&#x65F6;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x91CA;&#x653E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x5185;&#x5B58;&#x5230;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x91CA;&#x653E;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x3002;</p>
+<p>Activity.onDestory()<br>the system is temporarily destroying this instance of the activity to save space.<br>&#x7CFB;&#x7EDF;&#x9500;&#x6BC1;&#x4E86;&#x8FD9;&#x4E2A;Activity&#x7684;&#x5B9E;&#x4F8B;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5360;&#x636E;&#x7684;&#x7A7A;&#x95F4;&#x3002;<br>&#x5728;Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#xFF0C;onDestory()&#x65B9;&#x6CD5;&#x662F;&#x4ED6;&#x751F;&#x547D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x8D44;&#x6E90;&#x7A7A;&#x95F4;&#x7B49;&#x5C31;&#x88AB;&#x56DE;&#x6536;&#x4E86;&#x3002;&#x5F53;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x6B64;Activity&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5FC5;&#x987B;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#xFF0C;&#x6267;&#x884C;onCreate()&#x65B9;&#x6CD5;&#x3002;</p>
+
       
     </div>
     
@@ -214,18 +217,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/07/11/App-Inventor-Leaning-Resources/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/13/Android-Date-Format/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          App Inventor 学习资源
+          【转】Android中关于Date格式化的方法总结
         
       </div>
     </a>
   
   
-    <a href="/2016/07/10/Hexo-Git-Blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo+Git 搭建Blog</div>
+    <a href="/2017/03/13/MySQL-StartServer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何用命令行对mysql进行操作</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Android中Mipmap和Drawable的区别 | Shmily&#39;s Blog</title>
+  <title>【转】Android中关于Date格式化的方法总结 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
+  <meta name="description" content="&amp;#x65B9;&amp;#x6CD5;1&amp;#x76F4;&amp;#x63A5;&amp;#x4F7F;&amp;#x7528; android.text.format.DateFormat&amp;#x7C7B;&amp;#xFF1A;1String date = (String)DateFormat.format(&amp;quot;EEEE, MMMM dd&amp;#x65E5;, yyyy kk:mm&amp;quot;, new(Date());
+&amp;#x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android中Mipmap和Drawable的区别">
-<meta property="og:url" content="http://yoursite.com/2017/02/23/Android-DiffBetweenMipmapAndDrawable/index.html">
+<meta property="og:title" content="【转】Android中关于Date格式化的方法总结">
+<meta property="og:url" content="http://yoursite.com/2017/03/13/Android-Date-Format/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
-<meta property="og:description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
-<meta property="og:updated_time" content="2017-02-23T12:37:24.000Z">
+<meta property="og:description" content="&amp;#x65B9;&amp;#x6CD5;1&amp;#x76F4;&amp;#x63A5;&amp;#x4F7F;&amp;#x7528; android.text.format.DateFormat&amp;#x7C7B;&amp;#xFF1A;1String date = (String)DateFormat.format(&amp;quot;EEEE, MMMM dd&amp;#x65E5;, yyyy kk:mm&amp;quot;, new(Date());
+&amp;#x">
+<meta property="og:updated_time" content="2017-03-13T09:12:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android中Mipmap和Drawable的区别">
-<meta name="twitter:description" content="Android &amp;#x5728; API level 17 &amp;#x52A0;&amp;#x5165;&amp;#x4E86; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x5BF9; bitmap &amp;#x56FE;&amp;#x7247;&amp;#x7684;&amp;#x6E32;&amp;#x67D3;&amp;#x652F;&amp;#x6301; mipmap &amp;#x6280;&amp;#x672F;&amp;#xFF0C;&amp;#x6765;&amp;#">
+<meta name="twitter:title" content="【转】Android中关于Date格式化的方法总结">
+<meta name="twitter:description" content="&amp;#x65B9;&amp;#x6CD5;1&amp;#x76F4;&amp;#x63A5;&amp;#x4F7F;&amp;#x7528; android.text.format.DateFormat&amp;#x7C7B;&amp;#xFF1A;1String date = (String)DateFormat.format(&amp;quot;EEEE, MMMM dd&amp;#x65E5;, yyyy kk:mm&amp;quot;, new(Date());
+&amp;#x">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -168,11 +171,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Android-DiffBetweenMipmapAndDrawable" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android-Date-Format" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/" class="article-date">
-  	<time datetime="2017-02-23T12:35:30.000Z" itemprop="datePublished">2017-02-23</time>
+      <a href="/2017/03/13/Android-Date-Format/" class="article-date">
+  	<time datetime="2017-03-13T08:29:56.000Z" itemprop="datePublished">2017-03-13</time>
 </a>
     </div>
   
@@ -185,7 +188,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android中Mipmap和Drawable的区别
+      【转】Android中关于Date格式化的方法总结
     </h1>
   
 
@@ -205,12 +208,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Android &#x5728; API level 17 &#x52A0;&#x5165;&#x4E86; mipmap &#x6280;&#x672F;&#xFF0C;&#x5BF9; bitmap &#x56FE;&#x7247;&#x7684;&#x6E32;&#x67D3;&#x652F;&#x6301; mipmap &#x6280;&#x672F;&#xFF0C;&#x6765;&#x63D0;&#x9AD8;&#x6E32;&#x67D3;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x8D28;&#x91CF;&#x3002;</p>
-<p>mipmap &#x662F;&#x4E00;&#x79CD;&#x5F88;&#x65E9;&#x5C31;&#x6709;&#x7684;&#x6280;&#x672F;&#x4E86;&#xFF0C;&#x7FFB;&#x8BD1;&#x8FC7;&#x6765;&#x5C31;&#x662F;&#x7EB9;&#x7406;&#x6620;&#x5C04;&#x6280;&#x672F;&#x3002;android &#x4E2D;&#x7684; mipmap &#x6280;&#x672F;&#x4E3B;&#x8981;&#x4E3A;&#x4E86;&#x5E94;&#x5BF9;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#x7F29;&#x653E;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5728;android &#x4E2D;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; bitmap &#x56FE;&#x7247;&#xFF0C;&#x7531;&#x4E8E;&#x5E94;&#x7528;&#x7684;&#x9700;&#x8981;&#xFF08;&#x6BD4;&#x5982;&#x7F29;&#x653E;&#x52A8;&#x753B;&#xFF09;&#xFF0C;&#x53EF;&#x80FD;&#x5BF9;&#x8FD9;&#x4E2A; bitmap &#x8FDB;&#x884C;&#x5404;&#x79CD;&#x6BD4;&#x4F8B;&#x7684;&#x7F29;&#x5C0F;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x7F29;&#x5C0F;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x56FE;&#x7247;&#x7684;&#x8D28;&#x91CF;&#xFF0C;android &#x901A;&#x8FC7; mipmap &#x6280;&#x672F;&#x63D0;&#x524D;&#x5BF9;&#x6309;&#x7F29;&#x5C0F;&#x5C42;&#x7EA7;&#x751F;&#x6210;&#x56FE;&#x7247;&#x9884;&#x5148;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x63D0;&#x9AD8;&#x4E86;&#x56FE;&#x7247;&#x6E32;&#x67D3;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x8D28;&#x91CF;&#x3002;</p>
-<p>api &#x4E2D;&#x901A;&#x8FC7; Bitmap &#x7684; public final void setHasMipMap (boolean hasMipMap) &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x7CFB;&#x7EDF;&#x6E32;&#x67D3;&#x5668;&#x5C1D;&#x8BD5;&#x5F00;&#x542F; Bitmap &#x7684; mipmap &#x6280;&#x672F;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5EFA;&#x8BAE;&#x7CFB;&#x7EDF;&#x5F00;&#x542F;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x81F3;&#x4E8E;&#x662F;&#x5426;&#x6B63;&#x771F;&#x5F00;&#x542F;&#xFF0C;&#x8FD8;&#x662F;&#x7531;&#x7CFB;&#x7EDF;&#x51B3;&#x5B9A;&#x3002;</p>
-<p>res &#x76EE;&#x5F55;&#x4E0B;&#x9762; mipmap &#x548C; drawable &#x7684;&#x533A;&#x522B;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5F00;&#x542F;&#x7684;&#x533A;&#x522B;&#x3002;mipmap &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x9ED8;&#x8BA4; setHasMipMap &#x4E3A; true&#xFF0C;drawable &#x9ED8;&#x8BA4; setHasMipMap &#x4E3A; false&#x3002;</p>
-<p>google &#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x53EA;&#x628A; app &#x7684;&#x542F;&#x52A8;&#x56FE;&#x6807;&#x653E;&#x5728; mipmap &#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5176;&#x4ED6;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x4ECD;&#x7136;&#x653E;&#x5728; drawable &#x4E0B;&#x9762;&#x3002;</p>
-<p>google &#xFF1A;<br>drawable/<br>For bitmap files (PNG, JPEG, or GIF), 9-Patch image files, and XML files that describe Drawable shapes or Drawable objects that contain multiple states (normal, pressed, or focused). See the Drawable resource type.<br>mipmap/<br>For app launcher icons. The Android system retains the resources in this folder (and density-specific folders such as mipmap-xxxhdpi) regardless of the screen resolution of the device where your app is installed. This behavior allows launcher apps to pick the best resolution icon for your app to display on the home screen. For more information about using the mipmap folders, see Managing Launcher Icons as mipmap Resources.</p>
+        <h2 id="&#x65B9;&#x6CD5;1"><a href="#&#x65B9;&#x6CD5;1" class="headerlink" title="&#x65B9;&#x6CD5;1"></a>&#x65B9;&#x6CD5;1</h2><p>&#x76F4;&#x63A5;&#x4F7F;&#x7528; android.text.format.DateFormat&#x7C7B;&#xFF1A;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String date = (String)DateFormat.format(<span class="string">&quot;EEEE, MMMM dd&#x65E5;, yyyy kk:mm&quot;</span>, <span class="keyword">new</span>(Date());</div></pre></td></tr></table></figure></p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x53EF;&#x6839;&#x636E;&#x683C;&#x5C40;&#x9700;&#x8981;&#x6765;&#x8BBE;&#x5B9A;&#x65E5;&#x671F;&#x7684;&#x683C;&#x5F0F;&#x6A21;&#x677F;&#xFF0C;&#x4E3B;&#x8981;&#x6A21;&#x677F;&#x5982;&#x4E0B;&#xFF1A;<br>&#x201C;MM/dd/yy h:mmaa&#x201D; -&gt; &#x201C;11/03/87 11:23am&#x201D;<br>&#x201C;MMM dd, yyyy h:mmaa&#x201D; -&gt; &#x201C;Nov 3, 1987 11:23am&#x201D;<br>&#x201C;MMMM dd, yyyy h:mmaa&#x201D; -&gt; &#x201C;November 3, 1987 11:23am&#x201D;<br>&#x201C;E, MMMM dd, yyyy h:mmaa&#x201D; -&gt; &#x201C;Tues , November 3, 1987 11:23am&#x201D;<br>&#x201C;EEEE, MMMM dd, yyyy h:mmaa&#x201D; -&gt; &#x201C;Tues day, Nov 3, 1987 11:23am&#x201D;<br>&#x201C;yyyy&#x5E74;MM&#x6708;dd&#x65E5;,kk:mm&#x201D;  -&gt; 2014&#x5E74;09&#x6708;30&#x65E5;,11:23<br>&#xFF08;2&#xFF09;&#x5173;&#x4E8E;&#x7528;24&#x5C0F;&#x65F6;&#x5236;&#x7684;&#x8BBE;&#x5B9A;<br>&#x201C;EEEE, MMMM dd, yyyy kk:mm&#x201D; -&gt; &#x201C;Tues day, Nov 3, 1987 23:23&#x201D;<br>&#x5176;&#x4E2D;&#xFF1A;12&#x5C0F;&#x65F6;&#x5236; &#xFF1A;hh; 24&#x5C0F;&#x65F6;&#x5236;: kk&#xFF0C;&#x5982;&#x679C;&#x7528; SimpleDateFormat &#xFF0C;&#x5219;&#x4E3A;&#xFF1A; hh; HH<br>&#x6211;&#x4EEC;&#x53EF;&#x4F7F;&#x7528;Android.text.format.DateFormat&#x7C7B;&#x7684;static boolean is24HourFormat(Context context)&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#x662F;&#x5426;&#x4E3A;24&#x5C0F;&#x65F6;&#x5236;&#x5F0F;&#x3002;</p>
+<h2 id="&#x65B9;&#x6CD5;2"><a href="#&#x65B9;&#x6CD5;2" class="headerlink" title="&#x65B9;&#x6CD5;2"></a>&#x65B9;&#x6CD5;2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</div><div class="line"><span class="keyword">import</span> java.util.Date;</div><div class="line"></div><div class="line"><span class="keyword">long</span> time=System.currentTimeMillis();</div><div class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd EEEE HH:mm&quot;</span>);</div><div class="line">Date d1 = <span class="keyword">new</span> Date(time);</div><div class="line">String date = format.format(d1);</div></pre></td></tr></table></figure>
+<h2 id="&#x65B9;&#x6CD5;3"><a href="#&#x65B9;&#x6CD5;3" class="headerlink" title="&#x65B9;&#x6CD5;3"></a>&#x65B9;&#x6CD5;3</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</div><div class="line"><span class="keyword">import</span> java.util.Date;</div><div class="line"></div><div class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd E HH:mm&quot;</span>);</div><div class="line">String date = format.format(<span class="keyword">new</span> Date());</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -220,18 +221,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/02/24/Git-SSH/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hexo+Git 搭建Blog时需要注意的地方
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/23/Android-ReadTxt/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android中如何读取txt文件的内容以及其编码问题</div>
+    <a href="/2017/03/13/Android-Activity-Finish/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【转】Activity中的finish() VS OnDestroy()</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
