@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 15px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 17.5px;">MySQL</a>
+						<a href="/tags/Android/" style="font-size: 16.67px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,66 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Git-Remove-directory-from-Git" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/15/Git-Remove-directory-from-Git/" class="article-date">
+  	<time datetime="2017-03-15T09:39:57.000Z" itemprop="datePublished">2017-03-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/15/Git-Remove-directory-from-Git/">How to remove directory from remote and local</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Remove-directory-from-remote-repo-and-local"><a href="#Remove-directory-from-remote-repo-and-local" class="headerlink" title="Remove directory from remote repo and local"></a>Remove directory from remote repo and local</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm -r FolderName</div><div class="line">git commit -m <span class="string">&quot;Remove folder from repository&quot;</span></div><div class="line">git push origin &lt;your-git-branch&gt; (typically <span class="string">&apos;master&apos;</span>, but not always)</div></pre></td></tr></table></figure>
+<h2 id="Remove-directory-from-remote-repo-but-NOT-local"><a href="#Remove-directory-from-remote-repo-but-NOT-local" class="headerlink" title="Remove directory from remote repo but NOT local"></a>Remove directory from remote repo but NOT local</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm -r --cached FolderName</div><div class="line">git commit -m <span class="string">&quot;Removed folder from repository&quot;</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-Android-Date-Format" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -525,6 +585,7 @@
       
         <h1 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h1><p>&#x91CD;&#x65B0;&#x5B89;&#x88C5;Android Studio&#x6216;&#x4ECE;Eclipse&#x6362;&#x5230;AS&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x65B0;&#x7684;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x9047;&#x5230;&#x5982;&#x4E0B;&#x56FE;&#x90A3;&#x6837;&#xFF1A;<br><img src="/2017/02/24/Android-Update-Gradel-Manually/refreshing_gradle_halted.png" alt="&#x505C;&#x6B62;&#x72B6;&#x6001;"></p>
 <p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E00;&#x822C;&#x662F;&#x56E0;&#x4E3A;&#x5728;Android Studio&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x7248;&#x672C;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;Gradle&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF08;&#x4F46;&#x7531;&#x4E8E;&#x5899;&#x7684;&#x95EE;&#x9898;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x90FD;&#x662F;&#x5931;&#x8D25;&#xFF09;&#xFF0C;&#x4E8E;&#x662F;&#x505C;&#x6B62;&#x5728;Refreshing Gradle Project&#x72B6;&#x6001;&#x4E0B;&#x3002;</p>
+<p>&#x5173;&#x4E8E;gradle&#x3001;gradle plugin&#x3001;gradle&#x548C;gradlew&#x7684;&#x5177;&#x4F53;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;&#x4EE5;&#x4E0B;&#x94FE;&#x63A5;&#xFF1A;<br><a href="http://hucaihua.cn/2016/09/27/Gradle_upgrade/" target="_blank" rel="external">http://hucaihua.cn/2016/09/27/Gradle_upgrade/</a></p>
 <h1 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h1><p>&#x6253;&#x5F00;AndroidStudio&#x9879;&#x76EE;&#xFF0C;&#x627E;&#x5230;&#x9879;&#x76EE;&#x76EE;&#x5F55;\wrapper\gradle-wrapper.properties&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;<br><img src="/2017/02/24/Android-Update-Gradel-Manually/gradle-properties.png" alt="&#x5728;AS&#x4E2D;&#x6253;&#x5F00;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;"><br>&#x5728;&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;&#x627E;&#x5230;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip</div></pre></td></tr></table></figure></p>
 <p>&#x8FD9;&#x91CC;gradle-3.3-all.zip&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x7FFB;&#x5899;&#x53BB;&#x4E0B;&#x8F7D;&#x66F4;&#x65B0;&#x7684;gradle&#x7248;&#x672C;&#x3002;Android Studio&#x4F1A;&#x8054;&#x7F51;&#x4E0B;&#x8F7D;&#x7B26;&#x5408;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;Gradle&#x63D2;&#x4EF6;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x7F51;&#x5740;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4F46;&#x901F;&#x5EA6;&#x5B9E;&#x5728;&#x592A;&#x6162;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x4E0B;&#x8F7D;&#x9700;&#x8981;&#x82B1;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x6216;&#x76F4;&#x63A5;&#x8D85;&#x65F6;&#x3002;</p>
 <ul>
@@ -745,73 +806,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-MySQL-UserAndPrivilege" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/23/MySQL-UserAndPrivilege/" class="article-date">
-  	<time datetime="2017-02-23T12:25:33.000Z" itemprop="datePublished">2017-02-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/23/MySQL-UserAndPrivilege/">查看MariaDB(MYSQL)数据库中用户及其拥有权限</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x6743;&#x9650;&#xFF1A;"><a href="#&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x6743;&#x9650;&#xFF1A;" class="headerlink" title="&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x6743;&#x9650;&#xFF1A;"></a>&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x6743;&#x9650;&#xFF1A;</h2><p>&#xFF08;1&#xFF09;&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x7528;&#x6237;&#xFF1A;<br>SELECT DISTINCT CONCAT(&#x2018;User: &#x2018;&#x2019;&#x2019;,user,&#x2019;&#x2019;&#x2019;@&#x2019;&#x2019;&#x2019;,host,&#x2019;&#x2019;&#x2019;;&#x2019;) AS query FROM MySQL.user;<br>&#xFF08;2&#xFF09;&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5177;&#x4F53;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x6743;&#x9650;&#xFF1A;<br>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A; show grants for &#x2018;username&#x2019;@&#x2019;%&#x2019;;<br>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A; select * from mysql.user where user=&#x2019;aabb&#x2019;(&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x770B;&#x5230;&#x5177;&#x4F53;&#x5BF9;&#x5E94;&#x7684;&#x8868;&#x7684;&#x6743;&#x9650;)</p>
-<h2 id="&#x5728;PHPmyadmin&#x4E2D;&#x5982;&#x4F55;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x767B;&#x9646;&#xFF1F;"><a href="#&#x5728;PHPmyadmin&#x4E2D;&#x5982;&#x4F55;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x767B;&#x9646;&#xFF1F;" class="headerlink" title="&#x5728;PHPmyadmin&#x4E2D;&#x5982;&#x4F55;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x767B;&#x9646;&#xFF1F;"></a>&#x5728;PHPmyadmin&#x4E2D;&#x5982;&#x4F55;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x767B;&#x9646;&#xFF1F;</h2><p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x627E;&#x5230;phpMyAdmin&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;config.inc.php&#xFF09;&#x4E2D;&#x7684;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$cfg</span>[<span class="string">&apos;Servers&apos;</span>][<span class="variable">$i</span>][<span class="string">&apos;auth_type&apos;</span>] = <span class="string">&apos;config&apos;</span>;</div></pre></td></tr></table></figure></p>
-<p>&#x5C06;config&#x4FEE;&#x6539;&#x4E3A;cookie&#xFF01;</p>
-<p>&#x5728;&#x6B64;&#x6709;&#x56DB;&#x79CD;&#x6A21;&#x5F0F;&#x53EF;&#x4F9B;&#x9009;&#x62E9;&#xFF0C;cookie&#xFF0C;http&#xFF0C;HTTP&#xFF0C;config&#x3002;&#x5176;&#x4E2D;&#xFF0C;config&#x65B9;&#x5F0F;&#x5373;&#x8F93;&#x5165;phpmyadmin&#x7684;&#x8BBF;&#x95EE;&#x7F51;&#x5740;&#x5373;&#x53EF;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#xFF0C;&#x65E0;&#x9700;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x8BE5;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A;cookie&#xFF0C;http&#x6216;HTTP&#x65F6;&#xFF0C;&#x767B;&#x5F55;phpmyadmin&#x9700;&#x8981;&#x6570;&#x636E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;</p>
-<p>&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>PHP&#x5B89;&#x88C5;&#x6A21;&#x5F0F;&#x4E3A;Apache&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;http&#x548C;cookie&#xFF1B;</li>
-<li>PHP&#x5B89;&#x88C5;&#x6A21;&#x5F0F;&#x4E3A;CGI&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;cookie&#x3002;<br>&#x6240;&#x4EE5;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;cookie&#xFF01;&#xFF01;</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
 	</div>
 
       
