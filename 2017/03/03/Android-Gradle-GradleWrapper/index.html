@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>【转】gradle与gradle wrapper关系，以及版本关系 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
-gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
+  <meta name="description" content="&amp;#x5173;&amp;#x4E8E;gradle&amp;#x3001;gradle plugin&amp;#x3001;gradle&amp;#x548C;gradlew&amp;#x7684;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF0C;&amp;#x8FD8;&amp;#x8BF7;&amp;#x53C2;&amp;#x89C1;&amp;#x4EE5;&amp;#x4E0B;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;http://h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【转】gradle与gradle wrapper关系，以及版本关系">
 <meta property="og:url" content="http://yoursite.com/2017/03/03/Android-Gradle-GradleWrapper/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
-<meta property="og:description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
-gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
-<meta property="og:updated_time" content="2017-03-03T08:26:40.000Z">
+<meta property="og:description" content="&amp;#x5173;&amp;#x4E8E;gradle&amp;#x3001;gradle plugin&amp;#x3001;gradle&amp;#x548C;gradlew&amp;#x7684;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF0C;&amp;#x8FD8;&amp;#x8BF7;&amp;#x53C2;&amp;#x89C1;&amp;#x4EE5;&amp;#x4E0B;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;http://h">
+<meta property="og:updated_time" content="2017-03-19T09:26:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【转】gradle与gradle wrapper关系，以及版本关系">
-<meta name="twitter:description" content="&amp;#x8F6C;&amp;#x81EA;&amp;#xFF1A;http://blog.csdn.net/klx502/article/details/50762059
-gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distributionUrl=https\://services.gradle.org/distributions/gradle">
+<meta name="twitter:description" content="&amp;#x5173;&amp;#x4E8E;gradle&amp;#x3001;gradle plugin&amp;#x3001;gradle&amp;#x548C;gradlew&amp;#x7684;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF0C;&amp;#x8FD8;&amp;#x8BF7;&amp;#x53C2;&amp;#x89C1;&amp;#x4EE5;&amp;#x4E0B;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;http://h">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -109,7 +106,7 @@ gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distri
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 16.67px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
 					</div>
 				</section>
 				
@@ -208,7 +205,8 @@ gradle-wrapper.properties&amp;#x4E2D;&amp;#x7684;&amp;#x8BBE;&amp;#x7F6E;1distri
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/klx502/article/details/50762059" target="_blank" rel="external">http://blog.csdn.net/klx502/article/details/50762059</a></p>
+        <p>&#x5173;&#x4E8E;gradle&#x3001;gradle plugin&#x3001;gradle&#x548C;gradlew&#x7684;&#x5177;&#x4F53;&#x8BF4;&#x660E;&#xFF0C;&#x8FD8;&#x8BF7;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;&#x94FE;&#x63A5;&#xFF1A;<br><a href="http://hucaihua.cn/2016/09/27/Gradle_upgrade/" target="_blank" rel="external">http://hucaihua.cn/2016/09/27/Gradle_upgrade/</a></p>
+<p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/klx502/article/details/50762059" target="_blank" rel="external">http://blog.csdn.net/klx502/article/details/50762059</a></p>
 <h2 id="gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">distributionUrl=https\:<span class="comment">//services.gradle.org/distributions/gradle-2.8-all.zip</span></div></pre></td></tr></table></figure>
 <h2 id="build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript {</div><div class="line">    repositories {</div><div class="line">        jcenter()</div><div class="line">    }</div><div class="line">    dependencies {</div><div class="line">        classpath <span class="string">&apos;com.android.tools.build:gradle:1.5.0&apos;</span></div><div class="line"></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
 <h2 id="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"><a href="#&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;" class="headerlink" title="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"></a>&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;</h2><p>&#x95EE;&#xFF1A;<br>&#x5728;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E0E;gradle&#x76F8;&#x5173;&#x4F46;&#x662F;&#x7528;&#x5230;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;&#x3002;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x7684;&#x5173;&#x7CFB;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;gradle wrapper&#x4F5C;&#x7528;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>

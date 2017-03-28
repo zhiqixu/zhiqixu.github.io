@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Android | Shmily&#39;s Blog</title>
+  <title>Android Support Library v4、v7、v13包的区别 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shmily's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Android/index.html">
+  <meta name="description" content="&amp;#x7528;&amp;#x5904;&amp;#x8FD9;&amp;#x4E09;&amp;#x8005;&amp;#x672C;&amp;#x8D28;&amp;#x4E0A;&amp;#x5C31;&amp;#x662F;&amp;#x4E09;&amp;#x4E2A;java library&amp;#x3002;&amp;#x5982;&amp;#x679C;&amp;#x5728;&amp;#x4F4E;&amp;#x7248;&amp;#x672C;Android&amp;#x5E73;&amp;#x53F0;&amp;#x4E0A;&amp;#x5F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Support Library v4、v7、v13包的区别">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/Android-Support-Libs-Version/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="&amp;#x7528;&amp;#x5904;&amp;#x8FD9;&amp;#x4E09;&amp;#x8005;&amp;#x672C;&amp;#x8D28;&amp;#x4E0A;&amp;#x5C31;&amp;#x662F;&amp;#x4E09;&amp;#x4E2A;java library&amp;#x3002;&amp;#x5982;&amp;#x679C;&amp;#x5728;&amp;#x4F4E;&amp;#x7248;&amp;#x672C;Android&amp;#x5E73;&amp;#x53F0;&amp;#x4E0A;&amp;#x5F">
+<meta property="og:updated_time" content="2017-03-28T06:29:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shmily's Blog">
+<meta name="twitter:title" content="Android Support Library v4、v7、v13包的区别">
+<meta name="twitter:description" content="&amp;#x7528;&amp;#x5904;&amp;#x8FD9;&amp;#x4E09;&amp;#x8005;&amp;#x672C;&amp;#x8D28;&amp;#x4E0A;&amp;#x5C31;&amp;#x662F;&amp;#x4E09;&amp;#x4E2A;java library&amp;#x3002;&amp;#x5982;&amp;#x679C;&amp;#x5728;&amp;#x4F4E;&amp;#x7248;&amp;#x672C;Android&amp;#x5E73;&amp;#x53F0;&amp;#x4E0A;&amp;#x5F">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -164,177 +168,75 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Android-Support-Libs-Version" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/03/28/Android-Support-Libs-Version/" class="article-date">
+  	<time datetime="2017-03-28T06:25:52.000Z" itemprop="datePublished">2017-03-28</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Support Library v4、v7、v13包的区别
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/28/Android-Support-Libs-Version/" class="archive-article-date">
-  	<time datetime="2017-03-28T06:25:52.000Z" itemprop="datePublished">3月 28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/28/Android-Support-Libs-Version/">Android Support Library v4、v7、v13包的区别</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x7528;&#x5904;"><a href="#&#x7528;&#x5904;" class="headerlink" title="&#x7528;&#x5904;"></a>&#x7528;&#x5904;</h2><p>&#x8FD9;&#x4E09;&#x8005;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4E09;&#x4E2A;java library&#x3002;&#x5982;&#x679C;&#x5728;&#x4F4E;&#x7248;&#x672C;Android&#x5E73;&#x53F0;&#x4E0A;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53C8;&#x60F3;&#x4F7F;&#x7528;&#x9AD8;&#x7248;&#x672C;&#x624D;&#x62E5;&#x6709;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x5305;&#x6765;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x8FD9;&#x5C31;&#x662F; Android Support &#x5305;&#x3002;</p>
+<h2 id="&#x533A;&#x522B;"><a href="#&#x533A;&#x522B;" class="headerlink" title="&#x533A;&#x522B;"></a>&#x533A;&#x522B;</h2><h3 id="Android-Support-v4"><a href="#Android-Support-v4" class="headerlink" title="Android Support v4"></a>Android Support v4</h3><p>&#x8FD9;&#x4E2A;&#x5305;&#x662F;&#x4E3A;&#x4E86;&#x7167;&#x987E;Android 1.6&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x5305;&#x3002;</p>
+<h3 id="Android-Support-v7"><a href="#Android-Support-v7" class="headerlink" title="Android Support v7"></a>Android Support v7</h3><p>&#x8FD9;&#x4E2A;&#x5305;&#x662F;&#x4E3A;&#x4E86;&#x7167;&#x987E;Android 2.1&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x517C;&#x5BB9;&#x4F4E;&#x7248;&#x672C; Android&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;&#x679C;&#x5F00;&#x53D1;&#x4E2D;&#x4E0D;&#x8003;&#x8651; 1.6 &#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x8FD9;&#x4E2A;&#x5305;&#x3002;&#x53E6;&#x5916;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;v7 &#x5305;&#x662F;&#x4F9D;&#x8D56; v4 &#x5305;&#x7684;&#xFF0C;&#x5373;&#x5F15;&#x5165; v7 &#x5305;&#x7684;&#x8BDD;&#x8981;&#x540C;&#x65F6;&#x5F15;&#x5165; v4 &#x5305;&#x3002;</p>
+<h3 id="Android-Support-v13"><a href="#Android-Support-v13" class="headerlink" title="Android Support v13"></a>Android Support v13</h3><p>&#x8FD9;&#x4E2A;&#x5305;&#x662F;&#x4E3A;&#x4E86;&#x7167;&#x987E;Android 3.2&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x5F00;&#x53D1;&#x4E2D;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#xFF0C;&#x5E73;&#x677F;&#x5F00;&#x53D1;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5230;&#x3002;</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/15/Git-Remove-directory-from-Git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">How to remove directory from remote and local</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/Android-Date-Format/" class="archive-article-date">
-  	<time datetime="2017-03-13T08:29:56.000Z" itemprop="datePublished">3月 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/Android-Date-Format/">【转】Android中关于Date格式化的方法总结</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/Android-Activity-Finish/" class="archive-article-date">
-  	<time datetime="2017-03-13T08:02:00.000Z" itemprop="datePublished">3月 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/Android-Activity-Finish/">【转】Activity中的finish() VS OnDestroy()</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/" class="archive-article-date">
-  	<time datetime="2017-02-23T12:35:30.000Z" itemprop="datePublished">2月 23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/23/Android-DiffBetweenMipmapAndDrawable/">Android中Mipmap和Drawable的区别</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/23/Android-ReadTxt/" class="archive-article-date">
-  	<time datetime="2017-02-23T12:29:56.000Z" itemprop="datePublished">2月 23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/23/Android-ReadTxt/">Android中如何读取txt文件的内容以及其编码问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -360,9 +262,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

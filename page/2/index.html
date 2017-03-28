@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 16.67px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,64 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Android-ReadTxt" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/23/Android-ReadTxt/" class="article-date">
+  	<time datetime="2017-02-23T12:29:56.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/23/Android-ReadTxt/">Android中如何读取txt文件的内容以及其编码问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">ReadTxtFile</span><span class="params">(String strFilePath)</span></span></div><div class="line">{</div><div class="line">    String path = strFilePath;</div><div class="line">    String content = <span class="string">&quot;&quot;</span>; <span class="comment">//&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">    <span class="comment">//&#x6253;&#x5F00;&#x6587;&#x4EF6;</span></div><div class="line">    File file = <span class="keyword">new</span> File(path);</div><div class="line">    <span class="comment">//&#x5982;&#x679C;path&#x662F;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;&#x975E;&#x76EE;&#x5F55;&#x7684;&#x5224;&#x65AD;</span></div><div class="line">    <span class="keyword">if</span> (file.isDirectory())</div><div class="line">    {</div><div class="line">        Log.d(<span class="string">&quot;TestFile&quot;</span>, <span class="string">&quot;The File doesn&apos;t not exist.&quot;</span>);</div><div class="line">    }</div><div class="line">    <span class="keyword">else</span></div><div class="line">    {</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            InputStream instream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">            InputStreamReader inputStreamReader = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                inputStreamReader = <span class="keyword">new</span> InputStreamReader(instream, <span class="string">&quot;utf-8&quot;</span>);</div><div class="line">            } <span class="keyword">catch</span> (UnsupportedEncodingException e1) {</div><div class="line">                e1.printStackTrace();</div><div class="line">            }</div><div class="line">            BufferedReader reader = <span class="keyword">new</span> BufferedReader(inputStreamReader);</div><div class="line">            StringBuffer sb = <span class="keyword">new</span> StringBuffer(<span class="string">&quot;&quot;</span>);</div><div class="line">            String line;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) {</div><div class="line">                    sb.append(line);</div><div class="line">                    sb.append(<span class="string">&quot;\n&quot;</span>);</div><div class="line">                }</div><div class="line">            } <span class="keyword">catch</span> (IOException e) {</div><div class="line">                e.printStackTrace();</div><div class="line">            }</div><div class="line">            content = sb.toString();</div><div class="line">        }</div><div class="line">        <span class="keyword">catch</span> (java.io.FileNotFoundException e)</div><div class="line">        {</div><div class="line">            Log.d(<span class="string">&quot;TestFile&quot;</span>, <span class="string">&quot;The File doesn&apos;t not exist.&quot;</span>);</div><div class="line">        }</div><div class="line">        <span class="keyword">catch</span> (IOException e)</div><div class="line">        {</div><div class="line">            Log.d(<span class="string">&quot;TestFile&quot;</span>, e.getMessage());</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> content;</div><div class="line">}</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-MySQL-UserAndPrivilege" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -819,66 +877,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App-Inventor/">App Inventor</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-FindHiddenFiles" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/11/FindHiddenFiles/" class="article-date">
-  	<time datetime="2016-07-11T05:56:43.000Z" itemprop="datePublished">2016-07-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/11/FindHiddenFiles/">怎样查看隐藏文件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="&#x67E5;&#x770B;&#x6240;&#x6709;&#x6587;&#x4EF6;"><a href="#&#x67E5;&#x770B;&#x6240;&#x6709;&#x6587;&#x4EF6;" class="headerlink" title="&#x67E5;&#x770B;&#x6240;&#x6709;&#x6587;&#x4EF6;"></a>&#x67E5;&#x770B;&#x6240;&#x6709;&#x6587;&#x4EF6;</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></div><div class="line">$ killall Finder (&#x91CD;&#x542F;Finder)</div></pre></td></tr></table></figure>
-<h3 id="&#x9690;&#x85CF;&#x9690;&#x85CF;&#x6587;&#x4EF6;"><a href="#&#x9690;&#x85CF;&#x9690;&#x85CF;&#x6587;&#x4EF6;" class="headerlink" title="&#x9690;&#x85CF;&#x9690;&#x85CF;&#x6587;&#x4EF6;"></a>&#x9690;&#x85CF;&#x9690;&#x85CF;&#x6587;&#x4EF6;</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></div><div class="line">$ killall Finder (&#x91CD;&#x542F;Finder)</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OSX/">Mac OSX</a></li></ul>
 	</div>
 
       
