@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Android中获取Context的方法们的区别与联系 | Shmily&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="getActivity():This method gives the context of the Activity. You can use it is like the yourActivity.this. The method getActivity() is normally used in fragments to get the context of the activity in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android中获取Context的方法们的区别与联系">
+<meta property="og:url" content="http://yoursite.com/2017/03/30/Android-Context/index.html">
+<meta property="og:site_name" content="Shmily's Blog">
+<meta property="og:description" content="getActivity():This method gives the context of the Activity. You can use it is like the yourActivity.this. The method getActivity() is normally used in fragments to get the context of the activity in">
+<meta property="og:updated_time" content="2017-03-30T06:50:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android中获取Context的方法们的区别与联系">
+<meta name="twitter:description" content="getActivity():This method gives the context of the Activity. You can use it is like the yourActivity.this. The method getActivity() is normally used in fragments to get the context of the activity in">
+  
+    <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Shmily</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Notes on doing...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 17.5px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/XAMPP/" style="font-size: 10px;">XAMPP</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Shmily</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.JPG" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Shmily</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Notes on doing...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhiqixu" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fofolynn@hotmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Android-Context" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/30/Android-Context/" class="article-date">
+  	<time datetime="2017-03-30T06:41:05.000Z" itemprop="datePublished">2017-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android中获取Context的方法们的区别与联系
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="getActivity"><a href="#getActivity" class="headerlink" title="getActivity():"></a>getActivity():</h2><p>This method gives the context of the Activity. You can use it is like the yourActivity.this. The method getActivity() is normally used in <strong>fragments</strong> to get the context of the activity in which they are inserted or inflated.</p>
+<h2 id="getContext"><a href="#getContext" class="headerlink" title="getContext():"></a>getContext():</h2><p>Returns the context the view is currently running in. Usually the currently active Activity. getContext() is not defined in an Activity. It&#x2019;s used in a <strong>View</strong> (or <strong>View subclass</strong>) to get a reference to the enclosing context (an Activity).</p>
+<h5 id="Difference-between-getActivity-and-getContext"><a href="#Difference-between-getActivity-and-getContext" class="headerlink" title="Difference between getActivity() and getContext()"></a>Difference between getActivity() and getContext()</h5><p>Activity is a subclass of Context.</p>
+<p>When you call getActivity() you get an Activity which is a Context as well. But when you call getContext() you will get a Context which might not be an Activity.</p>
+<p>When using newer version of Support Library, when Fragment is not hosted by an Activity you can get different objects when calling getActivity() and getContext().</p>
+<h2 id="getApplication"><a href="#getApplication" class="headerlink" title="getApplication():"></a>getApplication():</h2><p>getApplication() is available to <strong>Activity and Services only</strong>. Although in current Android Activity and Service implementations, getApplication() and getApplicationContext() return the same object, there is no guarantee that this will always be the case (for example, in a specific vendor implementation). So if you want the Application class you registered in the Manifest, you should never call getApplicationContext() and cast it to your application, because it may not be the application instance (which you obviously experienced with the test framework).</p>
+<h2 id="getApplicationContext"><a href="#getApplicationContext" class="headerlink" title="getApplicationContext():"></a>getApplicationContext():</h2><p>Activity.getApplicationContext(): Returns the context for the entire application (the process all the Activities are running inside of). Use this instead of the current Activity context if you need a context tied to <strong>the lifecycle of the entire application</strong>, not just the current Activity.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/XAMPP-Databases-Data/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          XAMPP中数据库文件存放的路径以及删除数据库时某类错误的解决方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/30/Android-tools/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android tools的一些知识</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Shmily
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

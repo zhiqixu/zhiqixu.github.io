@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 20px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 17.5px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/XAMPP/" style="font-size: 10px;">XAMPP</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,263 @@
 
       <div class="body-wrap">
   
+    <article id="post-XAMPP-Databases-Data" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/10/XAMPP-Databases-Data/" class="article-date">
+  	<time datetime="2017-04-10T03:35:13.000Z" itemprop="datePublished">2017-04-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/10/XAMPP-Databases-Data/">XAMPP中数据库文件存放的路径以及删除数据库时某类错误的解决方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="XAMPP&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;"><a href="#XAMPP&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;" class="headerlink" title="XAMPP&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;"></a>XAMPP&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;</h2><p>&#xFF08;1&#xFF09;For Mac, your database files are located at:<br>/Applications/XAMPP/xamppfiles/var/mysql</p>
+<p>&#xFF08;2&#xFF09;For Wind, your database files are located at:<br>C:\xampp\mysql\data</p>
+<h2 id="&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x67D0;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"><a href="#&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x67D0;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;" class="headerlink" title="&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x67D0;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"></a>&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x67D0;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h2><h3 id="&#x9519;&#x8BEF;"><a href="#&#x9519;&#x8BEF;" class="headerlink" title="&#x9519;&#x8BEF;"></a>&#x9519;&#x8BEF;</h3><p>&#x8FD0;&#x884C;&#xFF1A;drop database student&#xFF0C;&#x53EF;&#x662F;&#x5374;&#x5F97;&#x5230;&#x4E86;ERROR 1010: Error dropping database (can&#x2019;t rmdir &#x2018;./student&#x2019;)&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6CD5;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h3><p>&#x5220;&#x9664;/var/lib/mysql/student&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x8981;&#x5220;&#x9664;student&#x672C;&#x8EAB;&#x3002;&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;drop database student&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XAMPP/">XAMPP</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android-Context" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/30/Android-Context/" class="article-date">
+  	<time datetime="2017-03-30T06:41:05.000Z" itemprop="datePublished">2017-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/30/Android-Context/">Android中获取Context的方法们的区别与联系</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="getActivity"><a href="#getActivity" class="headerlink" title="getActivity():"></a>getActivity():</h2><p>This method gives the context of the Activity. You can use it is like the yourActivity.this. The method getActivity() is normally used in <strong>fragments</strong> to get the context of the activity in which they are inserted or inflated.</p>
+<h2 id="getContext"><a href="#getContext" class="headerlink" title="getContext():"></a>getContext():</h2><p>Returns the context the view is currently running in. Usually the currently active Activity. getContext() is not defined in an Activity. It&#x2019;s used in a <strong>View</strong> (or <strong>View subclass</strong>) to get a reference to the enclosing context (an Activity).</p>
+<h5 id="Difference-between-getActivity-and-getContext"><a href="#Difference-between-getActivity-and-getContext" class="headerlink" title="Difference between getActivity() and getContext()"></a>Difference between getActivity() and getContext()</h5><p>Activity is a subclass of Context.</p>
+<p>When you call getActivity() you get an Activity which is a Context as well. But when you call getContext() you will get a Context which might not be an Activity.</p>
+<p>When using newer version of Support Library, when Fragment is not hosted by an Activity you can get different objects when calling getActivity() and getContext().</p>
+<h2 id="getApplication"><a href="#getApplication" class="headerlink" title="getApplication():"></a>getApplication():</h2><p>getApplication() is available to <strong>Activity and Services only</strong>. Although in current Android Activity and Service implementations, getApplication() and getApplicationContext() return the same object, there is no guarantee that this will always be the case (for example, in a specific vendor implementation). So if you want the Application class you registered in the Manifest, you should never call getApplicationContext() and cast it to your application, because it may not be the application instance (which you obviously experienced with the test framework).</p>
+<h2 id="getApplicationContext"><a href="#getApplicationContext" class="headerlink" title="getApplicationContext():"></a>getApplicationContext():</h2><p>Activity.getApplicationContext(): Returns the context for the entire application (the process all the Activities are running inside of). Use this instead of the current Activity context if you need a context tied to <strong>the lifecycle of the entire application</strong>, not just the current Activity.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android-tools" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/30/Android-tools/" class="article-date">
+  	<time datetime="2017-03-30T05:40:59.000Z" itemprop="datePublished">2017-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/30/Android-tools/">Android tools的一些知识</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="xmlns-tools-&#x201D;http-schemas-android-com-tools&#x201C;"><a href="#xmlns-tools-&#x201D;http-schemas-android-com-tools&#x201C;" class="headerlink" title="xmlns:tools=&#x201D;http://schemas.android.com/tools&#x201C;"></a>xmlns:tools=&#x201D;<a href="http://schemas.android.com/tools" target="_blank" rel="external">http://schemas.android.com/tools</a>&#x201C;</h2><p>tools&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;&#x4E00;&#x79CD;&#x662F;&#x5F71;&#x54CD;Lint&#x63D0;&#x793A;&#x7684;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x5173;&#x4E8E;xml&#x5E03;&#x5C40;&#x8BBE;&#x8BA1;&#x7684;&#x3002;</p>
+<p>Lint&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tools:ignore        //&#x544A;&#x8BC9;Lint&#x5FFD;&#x7565;xml&#x4E2D;&#x7684;&#x67D0;&#x4E9B;&#x8B66;&#x544A;&#x3002;</div><div class="line">tools:targetApi</div><div class="line">tools:locale</div></pre></td></tr></table></figure></p>
+<p>&#x6211;&#x4EEC;&#x5E38;&#x7528;&#x7684;tools&#x7B2C;&#x4E8C;&#x79CD;&#x5C5E;&#x6027;&#xFF1A;&#x5728;UI&#x8BBE;&#x8BA1;&#x7684;&#x65F6;&#x5019;&#x8986;&#x76D6;&#x6807;&#x51C6;&#x7684;android&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x6BD4;&#x5982;Android&#x5F00;&#x53D1;&#x4E2D;&#x5728;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x90FD;&#x4F1A;&#x6709;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF1A;<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">....</span></span></div><div class="line"><span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></div><div class="line"><span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span></div><div class="line"><span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></div><div class="line"><span class="attr">tools:context</span>=<span class="string">&quot;.MainActivity&quot;</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
+<p>&#x5176;&#x4E2D;tools&#x8D77;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x6863;<a href="http://tools.android.com/tech-docs/tools-attributes&#x3002;" target="_blank" rel="external">http://tools.android.com/tech-docs/tools-attributes&#x3002;</a> </p>
+<p>&#x5728;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6709;&#x8BF4;&#x8FD9;&#x4E48;&#x4E00;&#x53E5;: These are attributes which are used when the layout is rendered inthe tool, but have no impact on the runtime. This is useful if you for examplewant to put sample data in your textfields for when you are editing the layout,but you don&#x2019;t want those attributes to affect your running app.</p>
+<p>&#x6240;&#x4EE5;tools&#x4E2D;&#x7B2C;&#x4E8C;&#x79CD;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x5E03;&#x5C40;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53EA;&#x5728;&#x9884;&#x89C8;&#x5E03;&#x5C40;&#x65F6;&#x51FA;&#x73B0;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x8BE5;&#x5C5E;&#x6027;&#x4E0D;&#x5B58;&#x5728;&#x3002;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#xFF0C;tools:context=&#x201D;.MainActivity&#x201D;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8BA9;Layout Editor&#x77E5;&#x9053;&#x5F53;&#x524D;&#x5E03;&#x5C40;&#x5BF9;&#x5E94;&#x54EA;&#x4E00;&#x4E2A;Activity&#xFF0C;&#x6765;&#x66F4;&#x597D;&#x7684;&#x663E;&#x793A;&#x9884;&#x89C8;&#x754C;&#x9762;&#xFF0C;&#x5047;&#x5982;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x4E3B;&#x9898;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;ActionBar&#xFF0C;&#x5C31;&#x90FD;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6DFB;&#x52A0;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EA;&#x4F1A;&#x663E;&#x793A;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x7684;&#x754C;&#x9762;&#x3002;</p>
+<h2 id="tools-text-VS-android-text"><a href="#tools-text-VS-android-text" class="headerlink" title="tools:text VS android:text"></a>tools:text VS android:text</h2><p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/m0_37222746/article/details/54340893" target="_blank" rel="external">http://blog.csdn.net/m0_37222746/article/details/54340893</a><br>&#x65E2;&#x7136;TextView&#x6709;text&#x5C5E;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x5B83;&#x63D0;&#x4F9B;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x524D;&#x5C31;&#x77E5;&#x9053;&#x5B83;&#x5927;&#x6982;&#x7684;&#x6837;&#x5B50;&#x3002;&#x800C;&#x5F53;&#x5E94;&#x7528;&#x5728;&#x8BBE;&#x5907;&#x4E2D;&#x771F;&#x6B63;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x6240;&#x6709;tools&#x6253;&#x5934;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x6587;&#x5B57;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><textview android:id="@+id/text_main" android:layout_width="match_parent" android:layout_height="wrap_content" android:textappearance="@style/TextAppearance.Title" android:layout_margin="@dimen/main_margin" tools:text="I am a title"><br>&#x6CE8;&#x610F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x53EA;&#x6709;&#x5728;&#x7F16;&#x8F91;&#x9884;&#x89C8;&#x7684;&#x65F6;&#x5019;&#x6709;&#x6548;&#xFF0C;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6839;&#x672C;&#x5C31;&#x4E0D;&#x4F1A;&#x6253;&#x5165;apk&#x4E2D;&#x7684;&#x3002;</textview></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android-LayoutInflater" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/30/Android-LayoutInflater/" class="article-date">
+  	<time datetime="2017-03-30T03:33:43.000Z" itemprop="datePublished">2017-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/30/Android-LayoutInflater/">Android LayoutInflater详解</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="LayoutInflater&#x548C;findViewById-&#x7684;&#x7528;&#x6CD5;&#x533A;&#x522B;"><a href="#LayoutInflater&#x548C;findViewById-&#x7684;&#x7528;&#x6CD5;&#x533A;&#x522B;" class="headerlink" title="LayoutInflater&#x548C;findViewById()&#x7684;&#x7528;&#x6CD5;&#x533A;&#x522B;"></a>LayoutInflater&#x548C;findViewById()&#x7684;&#x7528;&#x6CD5;&#x533A;&#x522B;</h2><p>LayoutInflater&#x8FD9;&#x4E2A;&#x7C7B;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;findViewById()&#x3002;</p>
+<p>&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;<br>&#xFF08;1&#xFF09;LayoutInflater&#x662F;&#x7528;&#x6765;&#x627E;res/layout/&#x4E0B;&#x7684;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x4F8B;&#x5316;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x88AB;&#x8F7D;&#x5165;&#x6216;&#x8005;&#x60F3;&#x8981;&#x52A8;&#x6001;&#x8F7D;&#x5165;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;LayoutInflater.inflate()&#x6765;&#x8F7D;&#x5165;&#xFF1B;<br>&#xFF08;2&#xFF09;findViewById()&#x662F;&#x627E;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E0B;&#x7684;&#x5177;&#x4F53;widget&#x63A7;&#x4EF6;(&#x5982;Button&#x3001;TextView&#x7B49;)&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x8F7D;&#x5165;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Activiyt.findViewById()&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x5F97;&#x5176;&#x4E2D;&#x7684;&#x754C;&#x9762;&#x5143;&#x7D20;&#x3002;</p>
+<h2 id="&#x83B7;&#x5F97;LayoutInflater&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;"><a href="#&#x83B7;&#x5F97;LayoutInflater&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;" class="headerlink" title="&#x83B7;&#x5F97;LayoutInflater&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;"></a>&#x83B7;&#x5F97;LayoutInflater&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>. LayoutInflater inflater = getLayoutInflater();<span class="comment">//&#x8C03;&#x7528;Activity&#x7684;getLayoutInflater() </span></div><div class="line"><span class="number">2</span>. LayoutInflater inflater = LayoutInflater.from(context);  </div><div class="line"><span class="number">3</span>. LayoutInflater inflater =  (LayoutInflater)context.getSystemService</div><div class="line">                              (Context.LAYOUT_INFLATER_SERVICE);</div></pre></td></tr></table></figure>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x8FD9;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x672C;&#x8D28;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x4ECE;&#x6E90;&#x7801;&#x4E0A;&#x770B;&#x6700;&#x7EC8;&#x672C;&#x8D28;&#x662F;&#x90FD;&#x662F;&#x8C03;&#x7528;&#x7684;Context.getSystemService()&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Android-List-ArrayList" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -193,8 +450,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://www.cnblogs.com/aisiteru/articles/1151874.html" target="_blank" rel="external">http://www.cnblogs.com/aisiteru/articles/1151874.html</a></p>
-<h2 id="&#x5B9A;&#x4E49;"><a href="#&#x5B9A;&#x4E49;" class="headerlink" title="&#x5B9A;&#x4E49;"></a>&#x5B9A;&#x4E49;</h2><p>List&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x800C;ListArray&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x3002;<br>ListArray&#x7EE7;&#x627F;&#x5E76;&#x5B9E;&#x73B0;&#x4E86;List&#x3002; </p>
-<h2 id="&#x7528;&#x6CD5;"><a href="#&#x7528;&#x6CD5;" class="headerlink" title="&#x7528;&#x6CD5;"></a>&#x7528;&#x6CD5;</h2><p>List&#x4E0D;&#x80FD;&#x88AB;&#x6784;&#x9020;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x5411;&#x4E0A;&#x9762;&#x90A3;&#x6837;&#x4E3A;List&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x800C;ListArray&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x6784;&#x9020;&#x3002;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">List list;     <span class="comment">//&#x6B63;&#x786E;   list=null; </span></div><div class="line">List list = <span class="keyword">new</span> List();    <span class="comment">//   &#x662F;&#x9519;&#x8BEF;&#x7684;&#x7528;&#x6CD5;</span></div><div class="line">List list = <span class="keyword">new</span> ArrayList();<span class="comment">//&#x8FD9;&#x53E5;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;ArrayList&#x7684;&#x5BF9;&#x8C61;&#x540E;&#x628A;&#x5B83;&#x4E0A;&#x6EAF;&#x5230;&#x4E86;List&#x3002;&#x6B64;&#x65F6;&#x5B83;&#x662F;&#x4E00;&#x4E2A;List&#x5BF9;&#x8C61;&#x4E86;&#xFF0C;&#x6709;&#x4E9B;ArrayList&#x6709;&#x4F46;&#x662F;List&#x6CA1;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x7528;&#x4E86;&#x3002; </span></div><div class="line">ArrayList list = <span class="keyword">new</span> ArrayList();<span class="comment">//&#x521B;&#x5EFA;&#x4E00;&#x5BF9;&#x8C61;&#x5219;&#x4FDD;&#x7559;&#x4E86;ArrayList&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;</span></div></pre></td></tr></table></figure></p>
+<h2 id="&#x5B9A;&#x4E49;"><a href="#&#x5B9A;&#x4E49;" class="headerlink" title="&#x5B9A;&#x4E49;"></a>&#x5B9A;&#x4E49;</h2><p>List&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x800C;ArrayList&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x3002;<br>ArrayList&#x7EE7;&#x627F;&#x5E76;&#x5B9E;&#x73B0;&#x4E86;List&#x3002; </p>
+<h2 id="&#x7528;&#x6CD5;"><a href="#&#x7528;&#x6CD5;" class="headerlink" title="&#x7528;&#x6CD5;"></a>&#x7528;&#x6CD5;</h2><p>List&#x4E0D;&#x80FD;&#x88AB;&#x6784;&#x9020;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x5411;&#x4E0A;&#x9762;&#x90A3;&#x6837;&#x4E3A;List&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x800C;ArrayList&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x6784;&#x9020;&#x3002;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">List list;     <span class="comment">//&#x6B63;&#x786E;   list=null; </span></div><div class="line">List list = <span class="keyword">new</span> List();    <span class="comment">//   &#x662F;&#x9519;&#x8BEF;&#x7684;&#x7528;&#x6CD5;</span></div><div class="line">List list = <span class="keyword">new</span> ArrayList();<span class="comment">//&#x8FD9;&#x53E5;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;ArrayList&#x7684;&#x5BF9;&#x8C61;&#x540E;&#x628A;&#x5B83;&#x4E0A;&#x6EAF;&#x5230;&#x4E86;List&#x3002;&#x6B64;&#x65F6;&#x5B83;&#x662F;&#x4E00;&#x4E2A;List&#x5BF9;&#x8C61;&#x4E86;&#xFF0C;&#x6709;&#x4E9B;ArrayList&#x6709;&#x4F46;&#x662F;List&#x6CA1;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x7528;&#x4E86;&#x3002; </span></div><div class="line">ArrayList list = <span class="keyword">new</span> ArrayList();<span class="comment">//&#x521B;&#x5EFA;&#x4E00;&#x5BF9;&#x8C61;&#x5219;&#x4FDD;&#x7559;&#x4E86;ArrayList&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;</span></div></pre></td></tr></table></figure></p>
 <h2 id="&#x6E90;&#x7801;&#x5206;&#x6790;"><a href="#&#x6E90;&#x7801;&#x5206;&#x6790;" class="headerlink" title="&#x6E90;&#x7801;&#x5206;&#x6790;"></a>&#x6E90;&#x7801;&#x5206;&#x6790;</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestList</span></span>{ </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{ </div><div class="line">        List list = <span class="keyword">new</span> ArrayList(); </div><div class="line">        ArrayList arrayList = <span class="keyword">new</span> ArrayList();</div><div class="line"></div><div class="line">        list.trimToSize(); <span class="comment">//&#x9519;&#x8BEF;&#xFF0C;&#x6CA1;&#x6709;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;</span></div><div class="line">        arrayList.trimToSize();   <span class="comment">//ArrayList&#x91CC;&#x6709;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;</span></div><div class="line">    } </div><div class="line">}</div></pre></td></tr></table></figure>
 <p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#xFF1A;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">List a = <span class="keyword">new</span> ArrayList();</div></pre></td></tr></table></figure></p>
 <p>&#x5219;a&#x62E5;&#x6709;List&#x4E0E;ArrayList&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x4F1A;&#x51CF;&#x5C11;&#x3002;</p>
@@ -554,301 +811,9 @@
 
 
   
-    <article id="post-Android-Version-Setting" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/08/Android-Version-Setting/" class="article-date">
-  	<time datetime="2017-03-08T03:53:05.000Z" itemprop="datePublished">2017-03-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/08/Android-Version-Setting/">Android Studio 使用Support.v7和support.v4包遇到的各种问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x5982;&#x679C;&#x5728;Android Studio&#x4E2D;&#x6253;&#x5F00;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x4E86;&#x5982;&#x4E0B;Error&#xFF1A;<br>Failed to resolve: com.android.support:appcompat-v7:25.0.2&#xFF08;&#x4E0B;&#x56FE;&#x4E2D;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF09;<br><img src="/2017/03/08/Android-Version-Setting/error.png" alt=""></p>
-<p>&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E8E;compileSdkVersion&#x548C;buildToolsVersion&#x5BF9;&#x5E94;&#x7684;&#x7248;&#x672C;&#x548C;&#x5BFC;&#x5165;&#x7684;v7&#x5305;&#x8981;&#x6C42;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<h2 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;"></a>&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x660E;&#x786E;compileSdkVersion&#x7248;&#x672C;</h2><p>&#x5728;&#x4E0B;&#x56FE;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF0C;&#x63CF;&#x8FF0;&#x7684;&#x5373;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x7684;compileSdkVersion&#x7248;&#x672C;&#x3002;<br><img src="/2017/03/08/Android-Version-Setting/compileSdkVersion.png" alt=""></p>
-<h2 id="&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;compileSdkVersion&#x7248;&#x672C;&#x4FEE;&#x6539;appcompat-v7&#x5305;&#x7684;&#x7248;&#x672C;</h2><p>&#x5728;&#x4E0A;&#x56FE;&#x9EC4;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF0C;&#x660E;&#x663E;&#x53EF;&#x89C1;&#x7EA2;&#x8272;&#x6CE2;&#x6D6A;&#x7EBF;&#xFF0C;&#x8FD9;&#x5C31;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x6B64;&#x5904;&#x6709;&#x9519;&#x8BEF;&#x3002;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x8FC7;&#x53BB;&#xFF0C;&#x53EF;&#x89C1;&#x63D0;&#x9192;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/support.png" alt=""><br>&#x8FD9;&#x662F;&#x6307;&#x5F53;&#x524D;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;support&#x5305;&#x7248;&#x672C;&#x4E0E;compileSdkVersion&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x53EA;&#x6709;&#x8BBE;&#x7F6E;&#x6210;&#x4E00;&#x81F4;&#x80FD;&#x80FD;&#x8BA9;APP&#x6210;&#x529F;&#x8FD0;&#x884C;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x7EA2;&#x8272;&#x6846;&#x90E8;&#x5206;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/support-modified.png" alt=""></p>
-<h2 id="&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;"><a href="#&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;"></a>&#x5176;&#x4ED6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;</h2><h3 id="&#xFF08;1&#xFF09;minSDK-VS-targetSDK&#xFF1A;"><a href="#&#xFF08;1&#xFF09;minSDK-VS-targetSDK&#xFF1A;" class="headerlink" title="&#xFF08;1&#xFF09;minSDK VS targetSDK&#xFF1A;"></a>&#xFF08;1&#xFF09;minSDK VS targetSDK&#xFF1A;</h3><p>&#x8FD9;&#x4E24;&#x8005;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x5230;targetSDK&#x4E2D;&#x6700;&#x65B0;&#x7684;API&#x548C;&#x6700;&#x9177;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x4F60;&#x53C8;&#x4E0D;&#x5F97;&#x4E0D;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x5230;minSDK&#xFF0C;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x8BBE;&#x5907;&#x90FD;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7684;&#x8FD0;&#x884C;&#x4F60;&#x7684;app&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;Android&#x521A;&#x521A;&#x63A8;&#x51FA;&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x8FD9;&#x5BF9;&#x4E8E;&#x4F60;&#x7684;app&#x53C8;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x65B0;&#x7279;&#x6027;&#x7684;SDK&#x7248;&#x672C;&#xFF0C;minSDK&#x8BBE;&#x7F6E;&#x6210;&#x4F4E;&#x7248;&#x672C;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F60;&#x7684;app&#x3002;</p>
-<p>&#x4F8B;&#x5B50;1&#xFF1A;&#x5047;&#x5982;&#x4F60;&#x60F3;&#x7ED9;&#x4F60;&#x7684;app&#x52A0;&#x5165;&#x5927;&#x91CF;&#x7684;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#xFF08;sdk 7&#x624D;&#x5F15;&#x5165;&#x7684;&#xFF09;&#xFF0C;&#x7136;&#x800C;&#x8FD9;&#x4E9B;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;Button&#x6216;menu&#x7B49;&#x4EE3;&#x66FF;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x52A0;&#x5206;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x5C31;&#x9700;&#x8981;&#x628A;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;7&#xFF0C;&#x628A;minSDK&#x8BBE;&#x7F6E;&#x4E3A;3&#xFF08;&#x8FD9;&#x662F;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x73B0;&#x5728;&#x6CA1;&#x4EBA;&#x8FD8;&#x5728;&#x7528;&#x8FD9;&#x4E48;&#x8001;&#x7684;&#x8BBE;&#x5907;&#x4E86;&#xFF09;&#x8FD9;&#x6837;&#x5373;&#x4F7F;&#x662F;&#x4F7F;&#x7528;&#x8001;&#x8BBE;&#x5907;&#x7684;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F60;&#x7684;app&#x4E86;&#x3002;&#x7136;&#x540E;&#x4F60;&#x6240;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x5224;&#x65AD;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;7&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C31;&#x4F7F;&#x7528;&#x624B;&#x52BF;&#x64CD;&#x4F5C;&#xFF0C;&#x5C0F;&#x4E8E;7&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C31;&#x4F7F;&#x7528;button&#x7B49;&#x4EE3;&#x66FF;&#xFF0C;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4E86;&#x65B0;&#x624B;&#x673A;&#x7684;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x4F53;&#x9A8C;&#x5230;&#x4F60;app&#x4E2D;&#x9177;&#x70AB;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
-<p>&#x4F8B;&#x5B50;2&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7ED9;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x52A0;&#x5165;Android 5.0&#x7684;Material Design&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x4F1A;&#x5347;&#x7EA7;&#x5230;5.0&#x800C;&#x4F7F;&#x7528;&#x5230;&#x4F60;&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x800C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x7528;&#x6237;&#x7684;&#x624B;&#x673A;&#x786C;&#x4EF6;&#x592A;&#x8001;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x5347;&#x7EA7;&#x5230;5.0&#xFF0C;&#x9664;&#x975E;&#x4ED6;&#x4EEC;&#x6362;&#x65B0;&#x624B;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x8981;&#x4E3A;&#x4ED6;&#x4EEC;&#x8FDB;&#x884C;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x4E0D;&#x81F3;&#x4E8E;&#x635F;&#x5931;&#x8FD9;&#x90E8;&#x5206;&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x6837;&#x4F60;&#x7684;targetSDK&#x8BBE;&#x7F6E;&#x4E3A;21&#xFF0C;minSDK&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;8&#x3002;</p>
-<h3 id="&#xFF08;2&#xFF09;buildToolsVersion-VS-compileSdkVersion"><a href="#&#xFF08;2&#xFF09;buildToolsVersion-VS-compileSdkVersion" class="headerlink" title="&#xFF08;2&#xFF09;buildToolsVersion VS compileSdkVersion"></a>&#xFF08;2&#xFF09;buildToolsVersion VS compileSdkVersion</h3><ul>
-<li>CompileSdkVersion&#x662F;&#x4F60;SDK&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;API Level&#xFF0C;&#x4F8B;&#x5982;API-19&#x3001;API-20&#x3001;API-21&#x7B49;&#x7B49;&#x3002;</li>
-<li>buildeToolVersion&#x662F;&#x4F60;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x4E86;&#x6253;&#x5305;&#x5DE5;&#x5177;aapt&#x3001;dx&#x7B49;&#x7B49;&#x3002;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x76EE;&#x5F55;&#x4F4D;&#x4E8E;..your_sdk_path/build-tools/XX.XX.XX&#x3002;&#x4F8B;&#x5982;&#x6700;&#x65B0;&#x7684;build-tool&#x7684;&#x7248;&#x672C;&#x5C31;&#x662F;25.0.2&#x3002;</li>
-<li><p>&#x5728;android studio&#x4E2D;&#x662F;&#x5FC5;&#x987B;&#x5728;build.gradle&#x4E2D;&#x8BBE;&#x7F6E;buildToolsVersion&#x3002;&#x4F8B;&#x5982;&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">compileSdkVersion 22</div><div class="line">buildToolsVersion <span class="string">&quot;25.0.2&quot;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x9AD8;&#x7248;&#x672C;&#x7684;build-tool&#x53BB;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4E;&#x7248;&#x672C;&#x7684;sdk&#x5DE5;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;build-tool&#x7684;&#x7248;&#x672C;&#x4E3A;20&#xFF0C;&#x53BB;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;sdk&#x7248;&#x672C;&#x4E3A;18&#x7684;&#x3002;</p>
-</li>
-</ul>
-<p>&#x53E6;&#x5916;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6B63;&#x5982;&#x5149;&#x6807;&#x63D0;&#x793A;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4E2D;&#x8BB2;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x5019;&#x4E3A;&#x4E86;&#x80FD;&#x4F53;&#x9A8C;&#x5230;&#x6700;&#x65B0;&#x7684;Android&#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x6700;&#x65B0;&#x7684;SDK&#x66F4;&#x65B0;&#xFF0C;&#x8FD9;&#x4F1A;&#x540C;&#x65F6;&#x628A;build-Tools&#x4E5F;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x4E0B;&#x4E8C;&#x56FE;&#x6240;&#x793A;&#xFF08;AS2.3&#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5C06;&#x4E0D;&#x518D;&#x63D0;&#x4F9B;&#x72EC;&#x7ACB;&#x7684;SDK Manager&#x7A0B;&#x5E8F;&#xFF09;&#xFF1A;<br><img src="/2017/03/08/Android-Version-Setting/sdk update.png" alt=""><br><img src="/2017/03/08/Android-Version-Setting/sdk tools update.png" alt=""></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Android-Gradle-GradleWrapper" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/03/Android-Gradle-GradleWrapper/" class="article-date">
-  	<time datetime="2017-03-03T08:03:53.000Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/Android-Gradle-GradleWrapper/">【转】gradle与gradle wrapper关系，以及版本关系</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x5173;&#x4E8E;gradle&#x3001;gradle plugin&#x3001;gradle&#x548C;gradlew&#x7684;&#x5177;&#x4F53;&#x8BF4;&#x660E;&#xFF0C;&#x8FD8;&#x8BF7;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;&#x94FE;&#x63A5;&#xFF1A;<br><a href="http://hucaihua.cn/2016/09/27/Gradle_upgrade/" target="_blank" rel="external">http://hucaihua.cn/2016/09/27/Gradle_upgrade/</a></p>
-<p>&#x8F6C;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/klx502/article/details/50762059" target="_blank" rel="external">http://blog.csdn.net/klx502/article/details/50762059</a></p>
-<h2 id="gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#gradle-wrapper-properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>gradle-wrapper.properties&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">distributionUrl=https\:<span class="comment">//services.gradle.org/distributions/gradle-2.8-all.zip</span></div></pre></td></tr></table></figure>
-<h2 id="build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"><a href="#build-gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;" class="headerlink" title="build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;"></a>build.gradle&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript {</div><div class="line">    repositories {</div><div class="line">        jcenter()</div><div class="line">    }</div><div class="line">    dependencies {</div><div class="line">        classpath <span class="string">&apos;com.android.tools.build:gradle:1.5.0&apos;</span></div><div class="line"></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
-<h2 id="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"><a href="#&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;" class="headerlink" title="&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;"></a>&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x4E0E;gradle&#x76F8;&#x5173;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6709;&#x4F55;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B;&#xFF1F;</h2><p>&#x95EE;&#xFF1A;<br>&#x5728;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E0E;gradle&#x76F8;&#x5173;&#x4F46;&#x662F;&#x7528;&#x5230;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;&#x8BBE;&#x7F6E;&#x3002;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x7684;&#x5173;&#x7CFB;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;gradle wrapper&#x4F5C;&#x7528;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
-<p>&#x7B54;:<br>gradle wrapper task&#x5229;&#x7528;gradle-wrapper.properties&#x6765;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7684;gradle&#x3002;</p>
-<p>build.gradle&#x4E2D;classpath &#x2018;com.android.tools.build:gradle:1.5.0&#x2019;&#x8868;&#x793A;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;android plugin&#x7684;&#x5E93;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;android plugin&#x662F;&#x5BF9;gradle&#x5E93;&#x7684;&#x6269;&#x5C55;&#x3002;</p>
-<p>&#x524D;&#x8005;&#x662F;gradle&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5F53;&#x65F6;&#x6B63;&#x5F0F;&#x7248;&#x6700;&#x65B0;&#x7684;&#x662F;2.9&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5230;&#x8FD9;&#x91CC;&#x4E0B;&#x8F7D;<a href="https://services.gradle.org/distributions&#xFF1B;" target="_blank" rel="external">https://services.gradle.org/distributions&#xFF1B;</a><br>&#x540E;&#x8005;&#x662F;android plugin&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5F53;&#x65F6;&#x6B63;&#x5F0F;&#x7248;&#x672C;&#x6700;&#x65B0;&#x662F;1.5.0&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5230;&#x8FD9;&#x91CC;&#x6765;&#x4E0B;&#x8F7D;<a href="https://jcenter.bintray.com/com/android/tools/build/gradle/1.5.0/&#x3002;" target="_blank" rel="external">https://jcenter.bintray.com/com/android/tools/build/gradle/1.5.0/&#x3002;</a></p>
-<h2 id="&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;"><a href="#&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;" class="headerlink" title="&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;"></a>&#x53E6;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53C2;&#x8003;</h2><p>&#x53EF;&#x53C2;&#x89C1;<a href="http://blog.csdn.net/rodulf/article/details/50679928&#x3002;" target="_blank" rel="external">http://blog.csdn.net/rodulf/article/details/50679928&#x3002;</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Android-Update-Gradel-Manually" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/24/Android-Update-Gradel-Manually/" class="article-date">
-  	<time datetime="2017-02-24T11:39:36.000Z" itemprop="datePublished">2017-02-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/24/Android-Update-Gradel-Manually/">如何解决Android Studio Refreshing Gradle Project 编译更新Gradle卡住问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h1><p>&#x91CD;&#x65B0;&#x5B89;&#x88C5;Android Studio&#x6216;&#x4ECE;Eclipse&#x6362;&#x5230;AS&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x65B0;&#x7684;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x9047;&#x5230;&#x5982;&#x4E0B;&#x56FE;&#x90A3;&#x6837;&#xFF1A;<br><img src="/2017/02/24/Android-Update-Gradel-Manually/refreshing_gradle_halted.png" alt="&#x505C;&#x6B62;&#x72B6;&#x6001;"></p>
-<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E00;&#x822C;&#x662F;&#x56E0;&#x4E3A;&#x5728;Android Studio&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x7248;&#x672C;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;Gradle&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF08;&#x4F46;&#x7531;&#x4E8E;&#x5899;&#x7684;&#x95EE;&#x9898;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x90FD;&#x662F;&#x5931;&#x8D25;&#xFF09;&#xFF0C;&#x4E8E;&#x662F;&#x505C;&#x6B62;&#x5728;Refreshing Gradle Project&#x72B6;&#x6001;&#x4E0B;&#x3002;</p>
-<p>&#x5173;&#x4E8E;gradle&#x3001;gradle plugin&#x3001;gradle&#x548C;gradlew&#x7684;&#x5177;&#x4F53;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;&#x4EE5;&#x4E0B;&#x94FE;&#x63A5;&#xFF1A;<br><a href="http://hucaihua.cn/2016/09/27/Gradle_upgrade/" target="_blank" rel="external">http://hucaihua.cn/2016/09/27/Gradle_upgrade/</a></p>
-<h1 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h1><p>&#x6253;&#x5F00;AndroidStudio&#x9879;&#x76EE;&#xFF0C;&#x627E;&#x5230;&#x9879;&#x76EE;&#x76EE;&#x5F55;\wrapper\gradle-wrapper.properties&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;<br><img src="/2017/02/24/Android-Update-Gradel-Manually/gradle-properties.png" alt="&#x5728;AS&#x4E2D;&#x6253;&#x5F00;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;"><br>&#x5728;&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;&#x627E;&#x5230;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip</div></pre></td></tr></table></figure></p>
-<p>&#x8FD9;&#x91CC;gradle-3.3-all.zip&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x7FFB;&#x5899;&#x53BB;&#x4E0B;&#x8F7D;&#x66F4;&#x65B0;&#x7684;gradle&#x7248;&#x672C;&#x3002;Android Studio&#x4F1A;&#x8054;&#x7F51;&#x4E0B;&#x8F7D;&#x7B26;&#x5408;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;Gradle&#x63D2;&#x4EF6;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x7F51;&#x5740;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4F46;&#x901F;&#x5EA6;&#x5B9E;&#x5728;&#x592A;&#x6162;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x4E0B;&#x8F7D;&#x9700;&#x8981;&#x82B1;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x6216;&#x76F4;&#x63A5;&#x8D85;&#x65F6;&#x3002;</p>
-<ul>
-<li><p>&#x5148;&#x4E0B;&#x8F7D;<br>&#x4E0B;&#x8F7D;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x53BB;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;zip&#x6587;&#x4EF6;&#x3002;&#x81EA;&#x5DF1;&#x53BB;&#x624B;&#x52A8;&#x4E0B;&#x8F7D;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x5B9A;&#x4E49;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x8DEF;&#x5F84;(<a href="https://services.gradle.org/distributions/gradle-3.3-all.zip)&#x53BB;&#x4E0B;&#x8F7D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53BB;Gradle&#x5B98;&#x7F51;[http://services.gradle.org/distributions/](http://services.gradle.org/distributions/)&#x540E;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x548C;&#x6587;&#x4EF6;&#x91CC;&#x90A3;&#x4E2A;&#x7248;&#x672C;&#x76F8;&#x540C;&#xFF1B;&#x6216;&#x8005;&#x4E0B;&#x8F7D;&#x81EA;&#x5DF1;&#x60F3;&#x7528;&#x7684;&#x7248;&#x672C;&#x7136;&#x540E;&#x6539;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;BTW&#xFF1A;&#x5B98;&#x7F51;&#x7684;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x76F8;&#x5F53;&#x6162;&#x3002;&#x3002;&#x3002;" target="_blank" rel="external">https://services.gradle.org/distributions/gradle-3.3-all.zip)&#x53BB;&#x4E0B;&#x8F7D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53BB;Gradle&#x5B98;&#x7F51;[http://services.gradle.org/distributions/](http://services.gradle.org/distributions/)&#x540E;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x548C;&#x6587;&#x4EF6;&#x91CC;&#x90A3;&#x4E2A;&#x7248;&#x672C;&#x76F8;&#x540C;&#xFF1B;&#x6216;&#x8005;&#x4E0B;&#x8F7D;&#x81EA;&#x5DF1;&#x60F3;&#x7528;&#x7684;&#x7248;&#x672C;&#x7136;&#x540E;&#x6539;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;BTW&#xFF1A;&#x5B98;&#x7F51;&#x7684;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x76F8;&#x5F53;&#x6162;&#x3002;&#x3002;&#x3002;</a><br>&#xFF08;2&#xFF09;&#x53BB;&#x67D0;&#x5EA6;&#x641C;&#x4E00;&#x4E2A;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#xFF0C;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#xFF01;&#xFF01;&#xFF01;</p>
-</li>
-<li><p>&#x518D;&#x62F7;&#x8D1D;<br>&#x628A;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;&#x538B;&#x7F29;&#x5305;&#x62F7;&#x8D1D;&#x5230;wrapper\dists&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9762;&#x540C;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5185;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF08;&#x4EC5;&#x9700;&#x62F7;&#x8D1D;&#x65E0;&#x9700;&#x89E3;&#x538B;&#xFF09;:<br><img src="/2017/02/24/Android-Update-Gradel-Manually/gradle-directory.png" alt="&#x76EE;&#x6807;&#x76EE;&#x5F55;"></p>
-</li>
-<li><p>&#x91CD;&#x542F;Android Studio&#x540E;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x5373;&#x53EF;</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Git-SSH" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/24/Git-SSH/" class="article-date">
-  	<time datetime="2017-02-24T06:00:07.000Z" itemprop="datePublished">2017-02-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/24/Git-SSH/">Hexo+Git 搭建Blog时需要注意的地方</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x5BF9;&#x4E4B;&#x524D;&#x7684;&#x535A;&#x6587;&#x8FDB;&#x884C;&#x8865;&#x5145;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x5728;&#x5B89;&#x88C5;&#x5B8C;Git&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5BF9;SSH&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
-<ul>
-<li><p>&#x68C0;&#x67E5;SSH key</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x5907;&#x4EFD;&#x5DF2;&#x6709;&#x7684;key&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir key_backup</div><div class="line">mv id_rsa* key_backup</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x751F;&#x6210;SSH key</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &#x201C;xxx@xxx.com&#x201D;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;Github<br>&#x767B;&#x5F55;&#x5230;GitHub&#x9875;&#x9762;&#xFF0C;Account Settings-&gt;SSH Public Keys-&gt;Add another key&#x5C06;&#x751F;&#x6210;&#x7684;key(id_rsa.pub&#x6587;&#x4EF6;&#xFF09;&#x5185;&#x5BB9;copy&#x5230;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#xFF0C;save&#x3002;</p>
-</li>
-<li><p>&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x8BBE;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &#x201D;xxx&#x201D;</div><div class="line">git config --global user.email xxx@xxx.com</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#xFF08;2&#xFF09;&#x4FEE;&#x6539;hexo&#x6839;&#x76EE;&#x5F55;&#x4E0B;_config.yml&#x6587;&#x4EF6;&#xFF08;xxx&#x4E3A;&#x4F60;&#x7684;github&#x8D26;&#x6237;&#x540D;&#x79F0;&#xFF09;<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: github</div><div class="line">  repo: git@github.com:xxx/xxx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
