@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 17.5px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/XAMPP/" style="font-size: 10px;">XAMPP</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 17.5px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 10px;">XAMPP</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,74 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-SQLite-Related-Execs" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/16/SQLite-Related-Execs/" class="article-date">
+  	<time datetime="2017-05-16T02:50:13.000Z" itemprop="datePublished">2017-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/16/SQLite-Related-Execs/">【转】SQLite中execSql、query、rawQuery的用法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;SQLiteDatabase&#x7684;&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;API&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x7C7B;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;(Create)&#x3001;&#x67E5;&#x8BE2;(Retrieve)&#x3001;&#x66F4;&#x65B0;(Update)&#x548C;&#x5220;&#x9664;(Delete)&#x64CD;&#x4F5C;&#xFF08;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7B80;&#x79F0;&#x4E3A;CRUD&#xFF09;&#x3002;<br>&#x5BF9;SQLiteDatabase&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x91CD;&#x70B9;&#x638C;&#x63E1;execSQL()&#x548C;rawQuery()&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>execSQL()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6267;&#x884C;insert&#x3001;delete&#x3001;update&#x548C;CREATE TABLE&#x4E4B;&#x7C7B;&#x6709;&#x66F4;&#x6539;&#x884C;&#x4E3A;&#x7684;SQL&#x8BED;&#x53E5;<br>rawQuery()&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x6267;&#x884C;select&#x8BED;&#x53E5;&#x3002;</p>
+</blockquote>
+<p>(1)execSQL()&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x6848;&#x4F8B;<br>execSQL(String sql, Object[] bindArgs)&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;SQL&#x8BED;&#x53E5;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;SQL&#x8BED;&#x53E5;&#x4E2D;&#x5360;&#x4F4D;&#x7B26;&#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x53C2;&#x6570;&#x503C;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x8981;&#x548C;&#x5360;&#x4F4D;&#x7B26;&#x7684;&#x4F4D;&#x7F6E;&#x5BF9;&#x5E94;&#x3002;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SQLiteDatabase sqLiteDatabase = ....;  </div><div class="line">sqLiteDatabase .execSQL(&quot;<span class="keyword">insert</span> <span class="keyword">into</span> person(<span class="keyword">name</span>, age) <span class="keyword">values</span>(?,?)<span class="string">&quot;, new Object[]{&quot;</span>&#x6D4B;&#x8BD5;&#x6570;&#x636E;<span class="string">&quot;, 4});   </span></div><div class="line">sqLiteDatabase .close();</div></pre></td></tr></table></figure>
+<p>&#xFF08;2&#xFF09;rawQuery()&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x6848;&#x4F8B;<br>rawQuery()&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;select&#x8BED;&#x53E5;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;select&#x8BED;&#x53E5;&#x4E2D;&#x5360;&#x4F4D;&#x7B26;&#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;select&#x8BED;&#x53E5;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5360;&#x4F4D;&#x7B26;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;null&#x3002;&#x5E26;&#x5360;&#x4F4D;&#x7B26;&#x53C2;&#x6570;&#x7684;select&#x8BED;&#x53E5;&#x4F7F;&#x7528;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SQLiteDatabase sqLiteDatabase = ....;  </div><div class="line">Cursor cursor = sqLiteDatabase.rawQuery(&quot;<span class="keyword">select</span> * <span class="keyword">from</span> personwhere <span class="keyword">name</span> <span class="keyword">like</span> ?<span class="keyword">and</span> age=?<span class="string">&quot;, new String[]{&quot;</span>%iteedu%<span class="string">&quot;, &quot;</span><span class="number">4</span><span class="string">&quot;});   </span></div><div class="line">//......</div><div class="line">cursor.close();  </div><div class="line">sqLiteDatabase .close();</div></pre></td></tr></table></figure></p>
+<p>&#xFF08;3&#xFF09;query&#x548C;rawQuery<br>&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5206;&#x522B;&#x662F;query&#x548C;rawQuery&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#xFF0C;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x662F;rawQuery&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;SQL&#x8BED;&#x53E5;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x7684;&#x201C;&#xFF1F;&#x201D;&#x4F1A;&#x88AB;&#x540E;&#x9762;&#x7684;String[]&#x6570;&#x7EC4;&#x9010;&#x4E00;&#x5BF9;&#x6362;&#x6389;&#xFF1B;&#x800C;query&#x51FD;&#x6570;&#x662F;Android&#x81EA;&#x5DF1;&#x5C01;&#x88C5;&#x7684;&#x67E5;&#x8BE2;API&#x3002;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cursor cursor = db.rawQuery(&quot;<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> *** <span class="keyword">where</span> <span class="keyword">id</span>=?<span class="string">&quot;, new String[]{&quot;</span><span class="number">1</span><span class="string">&quot;});   </span></div><div class="line">Cursor cursor = db.query(&quot;***<span class="string">&quot;, new String[]{&quot;</span><span class="keyword">name</span><span class="string">&quot;}, &quot;</span><span class="keyword">id</span>=?<span class="string">&quot;, new String[]{&quot;</span><span class="number">1</span><span class="string">&quot;}, null, null, null);</span></div></pre></td></tr></table></figure></p>
+<p>query&#x5BF9;&#x6BD4;rawQuery&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;&#xFF0C;&#x5F53;&#x4F60;&#x7528;rawQuery&#x5728;&#x5199;&#x5165;SQL&#x8BED;&#x53E5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x5199;&#x9519;&#x4E86;&#x6216;&#x8005;&#x5199;&#x6F0F;&#x4E86;&#x4EC0;&#x4E48;&#x5355;&#x8BCD;&#x62FC;&#x5199;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x800C;query&#x76F8;&#x5BF9;&#x6765;&#x8BB2;&#x51FA;&#x9519;&#x7684;&#x673A;&#x7387;&#x5C31;&#x6BD4;&#x8F83;&#x5C0F;&#x3002;&#x8FD9;&#x4E24;&#x8005;&#x8C03;&#x7684;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; rawQueryWithFactory&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E3A;&#x4E86;&#x9632;&#x6B62;SQL&#x6CE8;&#x5165;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;query&#xFF0C;&#x7531;&#x4E8E;query&#x7684;&#x53C2;&#x6570;&#x4E00;&#x6BB5;&#x6BB5;&#x90FD;&#x662F;&#x5206;&#x5F00;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x63A8;&#x8350;&#x5927;&#x5BB6;&#x4F7F;&#x7528;rawQuery&#x539F;&#x59CB;SQL&#x8BED;&#x53E5;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x4EE3;&#x7801;&#x548C;&#x5904;&#x7406;&#x6548;&#x7387;&#x4E0A;&#x90FD;&#x6709;&#x4E0D;&#x5C0F;&#x7684;&#x63D0;&#x9AD8;&#xFF0C;&#x4E0D;&#x8FC7;&#x8981;&#x505A;&#x597D;SQL&#x8BED;&#x53E5;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLite/">SQLite</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-XAMPP-Databases-Data" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -721,73 +789,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-MySQL-StartServer" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/13/MySQL-StartServer/" class="article-date">
-  	<time datetime="2017-03-13T02:48:01.000Z" itemprop="datePublished">2017-03-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/MySQL-StartServer/">如何用命令行对mysql进行操作</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#xFF08;1&#xFF09;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;<br>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x201D;Can&#x2019;t connect to local MySQL server through socket&#x2026;&#x201D;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x56E0;&#x4E3A;MySQL&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;&#x542F;&#x7528;&#x3002;</p>
-<p>&#x7528;&#x547D;&#x4EE4;&#x884C;&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;MySQL&#x670D;&#x52A1;&#x5668;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo /usr/<span class="built_in">local</span>/mysql/support-files/mysql.server start </div><div class="line">sudo /usr/<span class="built_in">local</span>/mysql/support-files/mysql.server stop</div></pre></td></tr></table></figure></p>
-<p>&#xFF08;2&#xFF09;&#x4FEE;&#x6539;root&#x7528;&#x6237;&#x5BC6;&#x7801;<br>&#x65B9;&#x6CD5;1&#xFF1A; &#x7528;SET PASSWORD&#x547D;&#x4EE4;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#x3000;&#x3000;mysql -u root</div><div class="line">&#x3000;&#x3000;mysql&gt; SET PASSWORD FOR <span class="string">&apos;root&apos;</span>@<span class="string">&apos;localhost&apos;</span> = PASSWORD(<span class="string">&apos;newpass&apos;</span>);</div></pre></td></tr></table></figure></p>
-<p>&#x65B9;&#x6CD5;2&#xFF1A;&#x7528;mysqladmin<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#x3000;&#x3000;mysqladmin -u root password <span class="string">&quot;newpass&quot;</span></div></pre></td></tr></table></figure></p>
-<p>&#x5982;&#x679C;root&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x8FC7;&#x5BC6;&#x7801;&#xFF08;123456&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x4E3A;abcdef&#x7684;&#x547D;&#x4EE4;&#x662F;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root -p123456 password abcdef</div></pre></td></tr></table></figure></p>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x4E2D;&#x53C2;&#x6570;-p&#x4E0D;&#x8981;&#x548C;&#x540E;&#x9762;&#x7684;&#x5BC6;&#x7801;&#x5206;&#x5F00;&#x5199;&#xFF0C;&#x8981;&#x5199;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x51FA;&#x9519;</p>
-<p>&#x65B9;&#x6CD5;3&#xFF1A; &#x7528;UPDATE&#x76F4;&#x63A5;&#x7F16;&#x8F91;user&#x8868;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#x3000;&#x3000;mysql -u root</div><div class="line">&#x3000;&#x3000;mysql&gt; use mysql;</div><div class="line">&#x3000;&#x3000;mysql&gt; UPDATE user SET Password = PASSWORD(<span class="string">&apos;newpass&apos;</span>) WHERE user = <span class="string">&apos;root&apos;</span>;</div><div class="line">&#x3000;&#x3000;mysql&gt; FLUSH PRIVILEGES;</div></pre></td></tr></table></figure></p>
-<p>&#x5728;&#x4E22;&#x5931;root&#x5BC6;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#x3000;&#x3000;mysqld_safe --skip-grant-tables&amp;</div><div class="line">&#x3000;&#x3000;mysql -u root mysql</div><div class="line">&#x3000;&#x3000;mysql&gt; UPDATE user SET password=PASSWORD(<span class="string">&quot;new password&quot;</span>) WHERE user=<span class="string">&apos;root&apos;</span>;</div><div class="line">&#x3000;&#x3000;mysql&gt; FLUSH PRIVILEGES;</div></pre></td></tr></table></figure></p>
-<p>&#xFF08;3&#xFF09;&#x767B;&#x5F55;&#x4F7F;&#x7528;mysql<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -h localhost -u root -p</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
 	</div>
 
       
