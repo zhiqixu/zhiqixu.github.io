@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 12.5px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 17.5px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 12.5px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 10px;">XAMPP</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 14px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 18px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 14px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 18px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 12px;">XAMPP</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,67 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Android-Activity-Finish" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/13/Android-Activity-Finish/" class="article-date">
+  	<time datetime="2017-03-13T08:02:00.000Z" itemprop="datePublished">2017-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/13/Android-Activity-Finish/">【转】Activity中的finish() VS OnDestroy()</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Activity.finish()<br>Call this when your activity is done and should be closed.<br>&#x5728;&#x4F60;&#x7684;activity&#x52A8;&#x4F5C;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6216;&#x8005;Activity&#x9700;&#x8981;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EA;&#x662F;&#x5C06;&#x6700;&#x4E0A;&#x9762;&#x7684;Activity&#x79FB;&#x51FA;&#x4E86;&#x6808;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x7684;&#x8C03;&#x7528;onDestory&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x4E5F;&#x6CA1;&#x6709;&#x88AB;&#x53CA;&#x65F6;&#x91CA;&#x653E;&#x3002;&#x56E0;&#x4E3A;&#x79FB;&#x51FA;&#x4E86;&#x6808;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x4F60;&#x70B9;&#x51FB;&#x624B;&#x673A;&#x4E0A;&#x9762;&#x7684;&#x201C;back&#x201D;&#x6309;&#x952E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x518D;&#x627E;&#x5230;&#x8FD9;&#x4E2A;Activity&#x3002;&#x6362;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;finish&#x51FD;&#x6570;&#x4EC5;&#x4EC5;&#x628A;&#x5F53;&#x524D;Activity&#x9000;&#x51FA;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x6CA1;&#x6709;&#x91CA;&#x653E;&#x4ED6;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x4F55;&#x65F6;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x91CA;&#x653E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x5185;&#x5B58;&#x5230;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x91CA;&#x653E;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x3002;</p>
+<p>Activity.onDestory()<br>the system is temporarily destroying this instance of the activity to save space.<br>&#x7CFB;&#x7EDF;&#x9500;&#x6BC1;&#x4E86;&#x8FD9;&#x4E2A;Activity&#x7684;&#x5B9E;&#x4F8B;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5360;&#x636E;&#x7684;&#x7A7A;&#x95F4;&#x3002;<br>&#x5728;Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#xFF0C;onDestory()&#x65B9;&#x6CD5;&#x662F;&#x4ED6;&#x751F;&#x547D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x8D44;&#x6E90;&#x7A7A;&#x95F4;&#x7B49;&#x5C31;&#x88AB;&#x56DE;&#x6536;&#x4E86;&#x3002;&#x5F53;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x6B64;Activity&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5FC5;&#x987B;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#xFF0C;&#x6267;&#x884C;onCreate()&#x65B9;&#x6CD5;&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-MySQL-StartServer" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -742,82 +803,6 @@
       
         <p>&#x5C3D;&#x7BA1;MySQL&#x5BF9;check&#x4EC5;&#x7F16;&#x8BD1;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x5C3D;&#x7BA1;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x8F93;&#x5165;&#x7EA6;&#x675F;&#x653E;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#x53BB;&#x5B9E;&#x73B0;&#x624D;&#x662F;&#x738B;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x521B;&#x5EFA;table&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x8F93;&#x5165;&#x503C;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x68C0;&#x67E5;&#x3002;<br>&#x6B64;&#x65F6;&#x7528;enum&#x80FD;&#x5B9E;&#x73B0;&#x76F8;&#x4F3C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x6027;&#x522B;&#x201C;&#x7537;&#x201D;&#x6216;&#x201C;&#x5973;&#x201D;&#x7684;&#x8F93;&#x5165;&#x53D7;&#x9650;&#xFF1A;<br>&#x521B;&#x5EFA;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868;(</div><div class="line">.......</div><div class="line">&#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>) <span class="keyword">not</span> <span class="literal">null</span> ,</div><div class="line">.......</div><div class="line">)</div></pre></td></tr></table></figure></p>
 <p>&#x4FEE;&#x6539;&#x8868;&#x65F6;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> &#x5B66;&#x751F;&#x8868; <span class="keyword">modify</span> <span class="keyword">column</span> &#x6027;&#x522B; enum(<span class="string">&quot;&#x7537;&quot;</span>, <span class="string">&quot;&#x5973;&quot;</span>)</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-MySQL-Encoding" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/23/MySQL-Encoding/" class="article-date">
-  	<time datetime="2017-02-23T08:49:18.000Z" itemprop="datePublished">2017-02-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/23/MySQL-Encoding/">MySQL数据库编码问题如何解决</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;"><a href="#&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;" class="headerlink" title="&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;:"></a>&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x822C;&#x51C6;&#x5219;:</h2><p>1&#x3001;GBK/GB2312<br>&#x9002;&#x5408;&#x7EAF;&#x4E2D;&#x6587;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x5E93;<br>2&#x3001;LATIN1<br>&#x9002;&#x5408;&#x4E8E;&#x7EAF;&#x82F1;&#x6587;&#x7684;&#x5B58;&#x50A8;<br>3&#x3001;UTF8<br>&#x9002;&#x5408;&#x4E2D;&#x82F1;&#x6587;&#x6DF7;&#x5408;&#x7F16;&#x7801;&#x7684;&#x5B58;&#x50A8;&#x3002;</p>
-<h2 id="MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;"><a href="#MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;" class="headerlink" title="MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;:"></a>MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x5206;&#x4E3A;&#x56DB;&#x7EA7;:</h2><h3 id="&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;"><a href="#&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;" class="headerlink" title="&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;"></a>&#x4E00;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7F16;&#x7801;</h3><p>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;<br>&#xFF08;1&#xFF09;&#x7F16;&#x8F91;MySql&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br>MySql&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;MacOSX&#x7CFB;&#x7EDF;&#x4E2D;&#x662F;&#x5728;/etc/my.cnf</p>
-<p>&#x2013;&#x5728; [mysqld] &#x6807;&#x7B7E;&#x4E0B;&#x52A0;&#x4E0A;&#x4E24;&#x884C;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">character_<span class="built_in">set</span>_server=utf8  </div><div class="line">init_connect=<span class="string">&apos;SET NAMES utf8&apos;</span></div></pre></td></tr></table></figure></p>
-<p>&#xFF08;2&#xFF09;&#x91CD;&#x65B0;&#x542F;&#x52A8;MySql&#x670D;&#x52A1;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysql start</div></pre></td></tr></table></figure></p>
-<p>&#xFF08;3&#xFF09;&#x67E5;&#x770B;&#x8BBE;&#x7F6E;&#x7ED3;&#x679C;<br>&#x767B;&#x5F55;MySql&#x547D;&#x4EE4;&#x884C;&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql &#x2013;u root &#x2013;p &#x56DE;&#x8F66;</div></pre></td></tr></table></figure></p>
-<p>&#x8F93;&#x5165;&#x5BC6;&#x7801;<br>&#x8FDB;&#x5165;mysql&#x540E; &#x6267;&#x884C; &#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&apos;%character%&apos;</span>;</div></pre></td></tr></table></figure></p>
-<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#x5E94;&#x8BE5;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#xFF1A;<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+<br>| Variable_name            | Value                                          |<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+<br>| character_set_client     | utf8                                           |<br>| character_set_connection | utf8                                           |<br>| character_set_database   | utf8                                           |<br>| character_set_filesystem | binary                                         |<br>| character_set_results    | utf8                                           |<br>| character_set_server     | utf8                                           |<br>| character_set_system     | utf8                                           |<br>| character_sets_dir       | /Applications/XAMPP/xamppfiles/share/charsets/ |<br>+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;+&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;+</p>
-<p>&#xFF08;4&#xFF09;&#x5EFA;&#x5E93;&#x5BFC;&#x5165;&#x6570;&#x636E;<br>&#x5BFC;&#x5165;sql&#x811A;&#x672C;&#x6587;&#x4EF6;&#x524D;&#xFF0C;&#x5148;&#x786E;&#x4FDD;&#x8BE5;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x53CA;&#x5185;&#x5BB9;&#x683C;&#x5F0F;&#x4E3A;UTF-8&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;<br>&#x540C;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x767B;&#x5165;mysql&#x547D;&#x4EE4;&#x884C;&#xFF0C;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> &#x5E93;&#x540D;</div></pre></td></tr></table></figure></p>
-<p>&#x8FDB;&#x5165;&#x76F8;&#x5E94;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">names</span> utf8;</div><div class="line">source sql &#x811A;&#x672C;&#x6587;&#x4EF6;&#x540D;;</div></pre></td></tr></table></figure></p>
-<h3 id="&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;"><a href="#&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;" class="headerlink" title="&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;"></a>&#x4E8C;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;1&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8</div></pre></td></tr></table></figure></p>
-<p>&#x65B9;&#x6CD5;2&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="keyword">charset</span>=utf8</div></pre></td></tr></table></figure></p>
-<p>&#x4FEE;&#x6539;DB&#x7684;&#x7F16;&#x7801;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> db_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
-<h3 id="&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;"><a href="#&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;" class="headerlink" title="&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;"></a>&#x4E09;&#x3001;Mysq&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;1&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">......//&#x5B57;&#x6BB5;&#x4FE1;&#x606F;</div><div class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
-<p>&#x65B9;&#x6CD5;2&#x3001;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">......//&#x5B57;&#x6BB5;&#x4FE1;&#x606F;</div><div class="line">)<span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</div></pre></td></tr></table></figure></p>
-<p>&#x4FEE;&#x6539;&#x8868;table&#x7684;&#x7F16;&#x7801;:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8</div></pre></td></tr></table></figure></p>
-<h3 id="&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;"><a href="#&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;" class="headerlink" title="&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;"></a>&#x56DB;&#x3001;Mysql&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7F16;&#x7801;</h3><p>(&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;)<br>&#x65B9;&#x6CD5;:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> table_name</div><div class="line">(</div><div class="line">filed_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="built_in">character</span> <span class="keyword">set</span> utf8 //&#x6CE8;&#x610F;&#x4E0D;&#x80FD;&#x6709;<span class="keyword">default</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
-<p>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;field&#x7F16;&#x7801;&#xFF1A;<br>&#x65B9;&#x6CD5;:<br>&#x5047;&#x5982;&#x5B57;&#x6BB5;&#x7684;&#x9650;&#x5236;&#x662F; varchar(20) not null default &#x2018;&#x2019;;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">change</span> old_filed_name new_filed_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="string">&apos;abc&apos;</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</div></pre></td></tr></table></figure></p>
-<p>change&#x548C;modify&#x7684;&#x533A;&#x522B;&#xFF0C;modify&#x53EA;&#x80FD;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x5C5E;&#x6027;&#xFF0C;change&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x540D;&#x3002;</p>
 
       
     </div>
