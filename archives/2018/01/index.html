@@ -4,21 +4,14 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>怎样查杀进程 | Shmily&#39;s Blog</title>
+  <title>Archives: 2018/1 | Shmily&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x67E5;&amp;#x627E;&amp;#x8FDB;&amp;#x7A0B;1sudo lsof -i :9000 (&amp;#x6700;&amp;#x540E;&amp;#x7684;&amp;#x6570;&amp;#x5B57;&amp;#x8868;&amp;#x660E;&amp;#x7AEF;&amp;#x53E3;&amp;#x53F7;)
-&amp;#x67E5;&amp;#x8BE2;&amp;#x7ED3;&amp;#x679C;COMMAND PID USER FD TYPE DEVICE S">
-<meta property="og:type" content="article">
-<meta property="og:title" content="怎样查杀进程">
-<meta property="og:url" content="http://yoursite.com/2016/07/11/Kill-Processes/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Shmily's Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2018/01/index.html">
 <meta property="og:site_name" content="Shmily's Blog">
-<meta property="og:description" content="&amp;#x67E5;&amp;#x627E;&amp;#x8FDB;&amp;#x7A0B;1sudo lsof -i :9000 (&amp;#x6700;&amp;#x540E;&amp;#x7684;&amp;#x6570;&amp;#x5B57;&amp;#x8868;&amp;#x660E;&amp;#x7AEF;&amp;#x53E3;&amp;#x53F7;)
-&amp;#x67E5;&amp;#x8BE2;&amp;#x7ED3;&amp;#x679C;COMMAND PID USER FD TYPE DEVICE S">
-<meta property="og:updated_time" content="2016-07-11T05:55:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="怎样查杀进程">
-<meta name="twitter:description" content="&amp;#x67E5;&amp;#x627E;&amp;#x8FDB;&amp;#x7A0B;1sudo lsof -i :9000 (&amp;#x6700;&amp;#x540E;&amp;#x7684;&amp;#x6570;&amp;#x5B57;&amp;#x8868;&amp;#x660E;&amp;#x7AEF;&amp;#x53E3;&amp;#x53F7;)
-&amp;#x67E5;&amp;#x8BE2;&amp;#x7ED3;&amp;#x679C;COMMAND PID USER FD TYPE DEVICE S">
+<meta name="twitter:title" content="Shmily's Blog">
   
     <link rel="alternative" href="/atom.xml" title="Shmily&#39;s Blog" type="application/atom+xml">
   
@@ -171,83 +164,53 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Kill-Processes" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/07/11/Kill-Processes/" class="article-date">
-  	<time datetime="2016-07-11T05:52:51.000Z" itemprop="datePublished">2016-07-11</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/06/LaTeX-note/" class="archive-article-date">
+  	<time datetime="2018-01-06T10:58:15.000Z" itemprop="datePublished">1月 6</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      怎样查杀进程
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/06/LaTeX-note/">LaTeX使用笔记</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OSX/">Mac OSX</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LaTex/">LaTex</a></li></ul>
 	</div>
 
-        
+          
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="&#x67E5;&#x627E;&#x8FDB;&#x7A0B;"><a href="#&#x67E5;&#x627E;&#x8FDB;&#x7A0B;" class="headerlink" title="&#x67E5;&#x627E;&#x8FDB;&#x7A0B;"></a>&#x67E5;&#x627E;&#x8FDB;&#x7A0B;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo lsof -i :9000 (&#x6700;&#x540E;&#x7684;&#x6570;&#x5B57;&#x8868;&#x660E;&#x7AEF;&#x53E3;&#x53F7;)</div></pre></td></tr></table></figure>
-<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;<br>COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME<br>java 61342 a 313u IPv6 0x1111111111111 0t0 TCP *:cslistener (LISTEN)</p>
-<h2 id="&#x6740;&#x8FDB;&#x7A0B;"><a href="#&#x6740;&#x8FDB;&#x7A0B;" class="headerlink" title="&#x6740;&#x8FDB;&#x7A0B;"></a>&#x6740;&#x8FDB;&#x7A0B;</h2><p>&#x6839;&#x636E;PID&#x6740;&#x8FDB;&#x7A0B;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">kill</span> -9 61342</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/07/11/FindHiddenFiles/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          怎样查看隐藏文件
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/07/11/Markdown-Notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown 使用笔记</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-
-
-
-
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -273,8 +236,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
