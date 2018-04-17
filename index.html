@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 14px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 18px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 12px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 14px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 18px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 12px;">XAMPP</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 16.67px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 11.67px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 18.33px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 11.67px;">XAMPP</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,67 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-MySQL-Natural-Join" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/04/17/MySQL-Natural-Join/" class="article-date">
+  	<time datetime="2018-04-17T10:02:06.000Z" itemprop="datePublished">2018-04-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/17/MySQL-Natural-Join/">Natural join与笛卡尔积的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MySQL&#x4E2D;natural join&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x4EE5;&#x5B66;&#x751F;&#x8868;&#x4E0E;&#x9009;&#x8BFE;&#x8868;&#x8FDB;&#x884C;&#x81EA;&#x7136;&#x8FDE;&#x63A5;&#x4E3A;&#x4F8B;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * </div><div class="line"><span class="keyword">from</span> &#x5B66;&#x751F;&#x8868;</div><div class="line"><span class="keyword">natural</span> <span class="keyword">join</span> &#x9009;&#x8BFE;&#x8868;</div></pre></td></tr></table></figure></p>
+<p>MySQL&#x4E2D;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x8FDE;&#x63A5;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x540C;&#x6837;&#x4EE5;&#x5B66;&#x751F;&#x8868;&#x4E0E;&#x9009;&#x8BFE;&#x8868;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4E3A;&#x4F8B;&#xFF1A;<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * </div><div class="line"><span class="keyword">from</span> &#x5B66;&#x751F;&#x8868;,&#x9009;&#x8BFE;&#x8868;</div><div class="line"><span class="keyword">where</span> &#x5B66;&#x751F;&#x8868;.&#x5B66;&#x53F7;=&#x9009;&#x8BFE;&#x8868;.&#x5B66;&#x53F7;</div></pre></td></tr></table></figure></p>
+<p>&#x8FD9;&#x4E24;&#x79CD;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;<br>&#xFF08;1&#xFF09;natural join&#x65F6;&#xFF0C;&#x5916;&#x952E;&#x540D;&#x79F0;(foreign key)&#x4E0E;&#x6240;&#x6307;&#x5411;&#x7684;&#x8868;&#x7684;&#x4E3B;&#x952E;&#x540D;&#x79F0;(primary key)&#x5FC5;&#x987B;&#x76F8;&#x540C;&#xFF1B;<br>&#xFF08;2&#xFF09;natural join&#x65F6;&#x4F1A;&#x5408;&#x5E76;&#x76F8;&#x540C;&#x7684;&#x5217;&#xFF1B;<br>&#xFF08;3&#xFF09;&#x8FDB;&#x884C;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x65F6;&#x4E0D;&#x4F1A;&#x5408;&#x5E76;&#x76F8;&#x540C;&#x7684;&#x5217;&#xFF0C;&#x800C;&#x4E14;&#x5916;&#x952E;&#x540D;&#x79F0;(foreign key)&#x4E0E;&#x6240;&#x6307;&#x5411;&#x7684;&#x8868;&#x7684;&#x4E3B;&#x952E;&#x540D;&#x79F0;(primary key)&#x4E0D;&#x4E00;&#x5B9A;&#x76F8;&#x540C;&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-LaTeX-note" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -781,66 +842,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Git-Remove-directory-from-Git" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/15/Git-Remove-directory-from-Git/" class="article-date">
-  	<time datetime="2017-03-15T09:39:57.000Z" itemprop="datePublished">2017-03-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/15/Git-Remove-directory-from-Git/">How to remove directory from remote and local</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Remove-directory-from-remote-repo-and-local"><a href="#Remove-directory-from-remote-repo-and-local" class="headerlink" title="Remove directory from remote repo and local"></a>Remove directory from remote repo and local</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm -r FolderName</div><div class="line">git commit -m <span class="string">&quot;Remove folder from repository&quot;</span></div><div class="line">git push origin &lt;your-git-branch&gt; (typically <span class="string">&apos;master&apos;</span>, but not always)</div></pre></td></tr></table></figure>
-<h2 id="Remove-directory-from-remote-repo-but-NOT-local"><a href="#Remove-directory-from-remote-repo-but-NOT-local" class="headerlink" title="Remove directory from remote repo but NOT local"></a>Remove directory from remote repo but NOT local</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm -r --cached FolderName</div><div class="line">git commit -m <span class="string">&quot;Removed folder from repository&quot;</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 	</div>
 
       

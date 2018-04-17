@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -102,7 +102,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 14px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 18px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 12px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 14px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 18px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 12px;">XAMPP</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tags/App-Inventor/" style="font-size: 16.67px;">App Inventor</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTex/" style="font-size: 11.67px;">LaTex</a> <a href="/tags/MAC-OSX/" style="font-size: 10px;">MAC OSX</a> <a href="/tags/Mac-OSX/" style="font-size: 13.33px;">Mac OSX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 18.33px;">MySQL</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/XAMPP/" style="font-size: 11.67px;">XAMPP</a>
 					</div>
 				</section>
 				
@@ -165,6 +165,67 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Kill-Processes" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/11/Kill-Processes/" class="article-date">
+  	<time datetime="2016-07-11T05:52:51.000Z" itemprop="datePublished">2016-07-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/11/Kill-Processes/">怎样查杀进程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x67E5;&#x627E;&#x8FDB;&#x7A0B;"><a href="#&#x67E5;&#x627E;&#x8FDB;&#x7A0B;" class="headerlink" title="&#x67E5;&#x627E;&#x8FDB;&#x7A0B;"></a>&#x67E5;&#x627E;&#x8FDB;&#x7A0B;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo lsof -i :9000 (&#x6700;&#x540E;&#x7684;&#x6570;&#x5B57;&#x8868;&#x660E;&#x7AEF;&#x53E3;&#x53F7;)</div></pre></td></tr></table></figure>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;<br>COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME<br>java 61342 a 313u IPv6 0x1111111111111 0t0 TCP *:cslistener (LISTEN)</p>
+<h2 id="&#x6740;&#x8FDB;&#x7A0B;"><a href="#&#x6740;&#x8FDB;&#x7A0B;" class="headerlink" title="&#x6740;&#x8FDB;&#x7A0B;"></a>&#x6740;&#x8FDB;&#x7A0B;</h2><p>&#x6839;&#x636E;PID&#x6740;&#x8FDB;&#x7A0B;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">kill</span> -9 61342</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OSX/">Mac OSX</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-Markdown-Notes" class="article article-type-post" itemscope itemprop="blogPost">
   
